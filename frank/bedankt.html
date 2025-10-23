@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fysio-Lin -- Bedankt!</title>
+        <link rel="stylesheet" href="/reset.css">
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="/base.css">
+        
+        <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .thanks {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            z-index: 1;
+            padding: 1rem;            
+
+
+        }
+
+ 
+
+        .thanks p {
+            margin-top: 1rem;
+            position: relative;
+            font-size: 2rem;
+            margin-bottom: 100px;
+            position: relative;
+
+        }
+
+        .blocks {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+
+        }
+        
+
+    
+
+
+        .blocks .beige {
+            position: absolute;
+            top: 12.5rem;
+            right: 4rem;
+            background-color: var(--color-accent2);
+            min-width: 200px;
+            min-height: 50vh;
+            
+        }
+
+
+
+
+    </style>
+
+    </head>
+
+    <body>
+        <div class="blocks">
+            <div class="blue"></div>
+            <div class="beige"></div>
+        </div>
+        <div class="thanks">
+            <div class="text-wrapper">
+                <h1>Bedankt voor je bericht!</h1>
+                <p>We nemen zo snel mogelijk contact met je op!</p>
+                <a href="../index.html"><button>Terug</button></a>
+            </div>
+        </div>
+    </body>
+
+</html>

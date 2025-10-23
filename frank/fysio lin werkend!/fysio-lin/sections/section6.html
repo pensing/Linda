@@ -1,0 +1,118 @@
+
+<style>
+    #what-is /* love */ {
+        
+        background-image: url(./images/medium-shot-people-sitting-chairs43.jpg);
+        background-size: cover;
+        aspect-ratio: 1.435;
+        display: flex;
+        width: 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    #what-is .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 4rem 2rem;
+        text-align: center;
+        width: 30%;
+        margin: auto 10% auto auto;
+        background-color: #fff;
+        height: 30rem;
+        right: 10%;
+        position: relative;
+
+
+    }
+
+    #what-is h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #000;
+        text-transform: unset;
+        line-height: 30px;
+    }
+
+    #what-is p {
+        line-height: 40px;
+    }
+
+    #what-is .button {
+        color: var(--color-white);
+        background-color: var(--color-accent1);
+
+        padding: 0.5rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        #what-is .text-wrapper {
+            width: 40%;
+            height: 90%;
+            right: 0;
+            padding: 2rem 2rem;
+        }
+}
+
+
+
+    @media (min-width: 540px) and (max-width: 767px) {
+
+        #what-is .text-wrapper {
+            width: 50%;
+            height: 90%;
+            right: 0;
+            padding: 1rem 1rem;
+            gap: 0rem;
+        }
+        #what-is h2{
+            font-size: 1.5rem;
+        }
+}
+
+
+    @media only screen and (max-width: 540px) {
+        
+
+        #what-is .text-wrapper {
+            width: 60%;
+            height: 90%;
+            right: 0;
+            padding: 1rem 1rem;
+        }
+
+        #what-is {
+            max-height: 500px;
+            aspect-ratio: 1;
+
+        }
+
+        #what-is h2 {
+            font-size: 1.5rem;
+        }
+
+    }
+    
+
+    @media only screen and (max-width: 400) {
+         #what-is .text-wrapper{
+            padding: 2rem 2rem;
+            gap: 0;    
+            }
+    }
+</style>
+<section id="what-is"> <!--love,
+    baby don't hurt me-->
+    <div class="text-wrapper">
+        <h2>What is Group Therapy?</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            quas deleniti, temporibus nemo
+            praesentium saepe?
+        </p>
+        <a href="#" class="button_link">learn more</a>
+    </div>
+</section>

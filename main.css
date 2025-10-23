@@ -1,0 +1,208 @@
+/* Hier komt de opmaak van de standaard elementen zoals kopteksten, paragraph */
+
+/* STANDARD CLASSES */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-default);
+	color: var(--color-black);
+	background-color: var(--color-white);
+	min-height: 100vh;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; */
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* padding: 10px 0; */
+	box-shadow: 0px 0px 10px silver;
+}
+
+header nav a {
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+header nav a:hover {
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: var(--color-accent1);
+	background-color: #bfaeb447 !important;
+	/* background-color: var(--color-accent2); */	
+	border-radius: 100px;
+}
+
+main {
+	position: relative;
+}
+
+footer {
+	background-color: #333333;
+	color: var(--color-white);
+	padding: 15px;
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+}
+
+footer nav {
+	width: fit-content;
+}
+
+footer a {
+	color: var(--color-white);
+}
+
+section {
+	width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+	text-transform: capitalize;
+	color: var(--color-accent1);
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 6rem;
+	font-weight: 800;
+    line-height: 1.2;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: 800;
+    line-height: 1.4;
+}
+
+p {
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+a {
+	/* border-radius: 25px;
+	border: none; */
+	padding: 10px 15px;
+	/* background-color: hsla(0, 0%, 100%, 0.75); */
+	color: var(--color-black);
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	background-color: transparent;
+	color: hsla(0, 0%, 100%, 0.75);
+	/* border: solid 3px hsla(0, 0%, 100%, 0.75);
+	outline: none;
+	bottom: 37px; */
+	cursor: -webkit-grab;
+	cursor: grab;
+
+}
+
+/* button {} - zie CUSTOM CLASSES*/
+
+/* CUSTOM CLASSES */
+
+.logo {
+	height: 140px;
+	/* margin: 20px 0; */
+	/* box-shadow: 0px 0px 5px silver; */
+	/* border: solid 2px #7A1A82; */
+	/* border-bottom: 2px solid #7A1A82;
+  	border-left: 2px solid #7A1A82; */
+	/* border-radius: 999px;
+	padding: 0 70px; */
+	/* border-bottom: 10px solid; */
+	/* border-left: 10px solid; */
+	/* border: 1px solid; */
+	/* border-image: linear-gradient(var(--color-accent2), var(--color-accent1)) 5; */
+	/* border-image: linear-gradient(silver, var(--color-accent1)) 5; */
+}
+
+.logo img {
+	height: 100%;
+}
+
+.button_link,
+button {
+	display: inline-block;
+	background-color: var(--color-accent1);
+	color: var(--color-white);
+	border: none;
+	padding: 15px 30px;
+	font-family: var(--font-button);
+	font-size: 24px;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 99px;
+	margin: auto;
+	text-transform: lowercase;
+    /* line-height: 2; */
+}
+
+
+.button_link:hover,
+button:hover {
+	background-color: #c6cce9;
+	color: #111111;
+}
+
+
+.button_link-inverse {
+	background-color: var(--color-white);
+	color: var(--color-accent1);
+}
+
+
+.button_link-inverse:hover {
+	background-color: #c6cce9;
+	color: #111111;
+}
+
+#topButton {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--color-accent1); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 100px; /* Rounded corners */
+  border: solid 1px var(--color-white);
+  font-size: 32px;
+  /* mix-blend-mode: difference;
+  background-color: white;
+  color: #0e0240; */
+}
+
+#topButton i {
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+#topButton:hover {
+  background-color: #c6cce9; /* Add a dark-grey background on hover */
+  color: #111111;
+}

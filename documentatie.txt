@@ -1,0 +1,6 @@
+Ik heb voor het contact formulier phpmailer en composer gebruikt.
+
+verzenden2.php werkt met https://github.com/phpmailer zie test.frankpasman.com
+smtp-server gegevens van domein linda nodig, incl e-mail en wachtwoord.
+
+// wachtwoord in vendor/config.php 

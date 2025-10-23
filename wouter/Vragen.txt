@@ -1,0 +1,5 @@
+- Waarom de onregelmatigheden? (gekleurde balk positie verschil)
+- Kleuren zijn anders...
+- Zijn het links of niet (interactie)? (Freepik als <a>)
+
+- calc() idee

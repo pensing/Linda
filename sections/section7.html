@@ -1,0 +1,143 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="main.css">
+
+<style>
+    #understanding-therapy {
+        position: relative;
+        padding: 4rem 0;
+        margin-top: 200px;
+    }
+
+
+    #understanding-therapy .blue {
+        position: absolute;
+        width: 45%;
+        height: 72%;
+        background-color: var(--color-accent1);
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    #understanding-therapy .beige {
+        height: 31%;
+        width: 72%;
+        background-color: var(--color-accent2);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    #understanding-therapy .section-wrapper {
+        width: 71%;
+        margin: 7.5% auto;
+        background-color: white;
+        display: grid;
+        grid-template-areas:
+            "h2     text"
+            "img    img";
+        grid-template-columns: 40% auto;
+        gap: 2rem;
+    }
+
+    #understanding-therapy img {
+        width: 100%;
+        grid-area: img;
+        
+    }
+
+    #understanding-therapy h2 {
+        font-size: 2.75rem;
+        font-weight: 600;
+        color: var(--color-accent1);
+        text-transform: unset;
+        grid-area: h2;
+        padding: 2rem 0 0 2rem;
+    }
+
+    #understanding-therapy a.freepik {
+        color: unset;
+        text-decoration: underline;
+    }
+
+    .button_left {
+        margin-left: 0;
+    }
+
+    #understanding-therapy .text-wrapper {
+        grid-area: text;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #understanding-therapy p{
+         line-height: 30px;
+    }
+
+    @media only screen and (max-width: 1000px)    {
+        #understanding-therapy h2{
+            font-size: 2rem;
+        }
+    }
+
+
+    @media only screen and (max-width: 720px) {
+
+        #understanding-therapy .section-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+        }
+
+      #understanding-therapy h2{
+            font-size: 2rem;
+  }
+    }
+
+    @media only screen and (max-width: 540px) {
+
+        #understanding-therapy .section-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+        }
+
+          #understanding-therapy h2{
+            font-size: 2rem;
+          }
+          
+          .beige{
+            max-height: 25%;
+          }
+    }
+</style>
+
+<section id="understanding-therapy">
+
+    <div class="blue"></div>
+    <div class="beige"></div>
+
+    <div class="section-wrapper">
+        <h2>Orofaciale fysiotherapie</h2>
+        <div class="text-wrapper">
+
+            <p>Als orofaciaal fysiotherapeut help ik cliënten met onder andere hoofd- en halsklachten. In de meeste gevallen zijn deze klachten afkomstig uit het kaakgebied. Tijdens deze behandeling worden er eventueel korte lijntjes onderhouden met de tandarts, diëtist en/of logopedist. Heeft u al langere tijd klachten rondom uw kaak waar u maar geen oplossing voor weet te vinden, schroom niet om contact op te nemen. Wellicht dat ik u hierbij kan helpen.
+            </p>
+       
+            <a href="#" class="button_link button_left">maak een afspraak</a>
+        </div>
+
+        <img src="./images/Gelaatsklachten-Fysiotherapie.jpg" alt>
+
+    </div>
+</section>
+</body>
+
+</html>

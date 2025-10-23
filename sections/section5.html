@@ -1,0 +1,138 @@
+<!-- Vestibulaire fysiotherapie -->
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="main.css">
+<style>
+    #group-therapy {
+      padding: 5rem  9rem;
+      max-width: 100%;
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+
+    #group-therapy .image-wrapper {
+        position: relative;
+        aspect-ratio: 1.2;
+        width: 100%;
+        flex-basis: 50%;
+        min-width: 50%;
+    }
+
+    #group-therapy .blue {
+        position: absolute;
+        width: 10%;
+        height: 65%;
+        top: 16%;
+        left: 0;
+        background-color: var(--color-accent1);
+    }
+
+    #group-therapy .beige {
+        position: absolute;
+        width: 68%;
+        height: 83%;
+        bottom: 0;
+        right: 0;
+        background-color: var(--color-accent2);
+    }
+
+
+    #group-therapy img {
+        position: absolute;
+        width: 83.2%;
+        height: 87.5%;
+        top: 0;
+        left: 8%;
+        /* box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3); */
+        object-fit: cover;
+
+
+
+    }
+
+
+    
+
+    #group-therapy .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex-basis: 30%;
+        line-height: 2rem;
+        /* line heights weg en/of flex basis terug naar 60%???? */
+    }
+
+
+    #group-therapy h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #000;
+        text-transform: unset;
+        line-height: 4rem;
+       
+    }
+
+    #group-therapy a{
+        line-height: 20px;
+    }
+
+
+
+    @media only screen and (max-width: 720px) {
+        #group-therapy {
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+    #group-therapy h2{
+        font-size: 2rem;
+        line-height: 2rem;
+        /* lin height weg */
+    }
+
+        #group-therapy .image-wrapper {
+            aspect-ratio: 1.4;
+        }
+    }
+
+
+    @media only screen and (max-width: 540px) {
+        #group-therapy {
+            min-width: 90%;
+        }
+        
+        #group-therapy .beige {
+            max-height: 86%;
+        }
+    }
+
+
+    @media only screen and (max-width: 340px) {
+        #group-therapy {
+            width: 90%;
+        }
+    }
+</style>
+
+<section id="group-therapy">
+    <div class="image-wrapper">
+        <div class="blue"></div>
+        <div class="beige"></div>
+        <img src="./images/fysiotherapie-bij-duizeligheid.jpg"
+            alt="Groep therapie">
+    </div>
+
+    <div class="text-wrapper">
+        <h2>Vestibulaire fysiotherapie</h2>
+        <p>
+            Ook ben ik werkzaam als vestibulair fysiotherapeut. Bij een vestibulair therapeut komt u terecht wanneer u last heeft van evenwichtsproblemen en duizeligheid. Ik kan met u dan kijken naar oefeningen met verschillende lichaamshoudingen en activiteiten om eventuele duizeligheid en evenwichtsproblemen te verbeteren. 
+        </p>
+
+        <a href="#" class="button_link button_left">maak een afspraak</a>
+    </div>
+
+</section>

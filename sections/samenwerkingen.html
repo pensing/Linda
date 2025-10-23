@@ -1,0 +1,85 @@
+<style>
+.samenwerkingen {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+/* 
+.samenwerkingen h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e154d;
+  margin-bottom: 2rem;
+} */
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.partner-card {
+  background: #f0eef4;
+  padding: 1.5rem;
+  /* border-radius: 12px; */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.partner-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1e154d;
+}
+
+.partner-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.partner-card .btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #1e154d;
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.partner-card .btn:hover {
+  background: #3c2d7a;
+}
+</style>
+
+<section class="samenwerkingen">
+  <div class="container page-wrapper">
+    <h2>Samenwerkingen</h2>
+    <div class="partners">
+      <div class="partner-card">
+        <h3>Praktijk voor gespecialiseerde fysiotherapie Jeroen van der Weide</h3>
+        <a href="https://www.jvanderweide.nl" target="_blank" class="btn">Bezoek website</a>
+      </div>
+      <div class="partner-card">
+        <h3>Instituut für Vestibulair Rehabilitation (IVRT)</h3>
+        <a href="https://www.ivrt.de/nl/" target="_blank" class="btn">Bezoek website</a>
+        <a href="https://www.youtube.com/results?search_query=IVRT" target="_blank" class="btn">Bekijk video’s</a>
+      </div>
+      <div class="partner-card">
+        <h3>SOMT & Saxion</h3>
+        <p>Gastdocent, examinator en stagedocent voor de masteropleiding manuele therapie / musculoskeletaal.</p>
+      </div>
+      <!-- <div class="partner-card">
+        <h3>THIM Advanced Learning Platform</h3>
+        <p>Vestibulaire revalidatie: EBP bij duizeligheid en evenwichtsproblemen - fysiotherapie</p>
+      </div> -->
+      <!-- <div class="partner-card">
+        <h3>IVRT YouTube</h3>
+        <a href="https://www.youtube.com/results?search_query=IVRT" target="_blank" class="btn">Bekijk video’s</a>
+      </div> -->
+    </div>
+  </div>
+</section>

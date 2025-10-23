@@ -1,0 +1,126 @@
+
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="main.css">
+<style>
+        #group-therapy .image-wrapper {
+            position: relative;
+            aspect-ratio: 1.04;
+
+            width: 100%;
+            flex-basis: 50%;
+        }
+
+        #group-therapy .blue {
+            position: absolute;
+            width: 10%;
+            height: 65%;
+            top: 16%;
+            left: 0;
+            background-color: var(--color-accent1);
+        }
+
+        #group-therapy .beige {
+            position: absolute;
+            width: 68%;
+            height: 83%;
+            bottom: 0;
+            right: 0;
+            background-color: var(--color-accent2);
+        }
+
+
+        #group-therapy img {
+            position: absolute;
+            width: 83.2%;
+            height: 87.5%;
+            top: 0;
+            left: 8%;
+            box-shadow: 0 0 0.5rem #000;
+
+        }
+
+
+        #group-therapy {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            width: 80%;
+            margin: 4rem auto;
+        }
+
+        #group-therapy .text-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            flex-basis: 50%;
+        }
+
+        #group-therapy h2 {
+            font-size: 2.75rem;
+            font-weight: 600;
+            color: var(--color-accent1);
+            text-transform: unset;
+        }
+
+        #group-therapy a.freepik {
+            color: unset;
+            text-decoration: underline;
+        }
+
+        #group-therapy .button {
+            color: var(--color-white);
+            background-color: var(--color-accent1);
+            width: fit-content;
+            padding: 0.5rem 1.5rem;
+            border-radius: 1.5rem;
+        }
+
+
+        @media only screen and (max-width: 720px) {
+            #group-therapy {
+                flex-direction: column;
+            }
+
+            #group-therapy .image-wrapper {
+                aspect-ratio: 1.2;
+            }
+        }
+
+
+        @media only screen and (max-width: 540px) {
+            #group-therapy {
+                width: 90%;
+            }
+        }
+
+
+        @media only screen and (max-width: 340px) {
+            #group-therapy {
+                width: 80%;
+            }
+        }
+    </style>
+
+<section id="group-therapy">
+    <div class="image-wrapper">
+        <div class="blue"></div>
+        <div class="beige"></div>
+        <img src="./images/full-shot-group-people-therapy_2.jpg"
+            alt="Groep therapie">
+    </div>
+
+    <div class="text-wrapper">
+        <h2>Psychology and Counseling Services</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Adipisci iste doloribus quos quas. Praesentium consequuntur
+            ducimus iure modi? Rem cumque itaquef omnis aperiam quisquam
+            explicabo dolore aut architecto dignissimos totam?
+        </p>
+        <p>
+            Image from <a href="#" class="freepik">Freepik</a>
+        </p>
+        <a href="#" class="button">learn more</a>
+    </div>
+</section>

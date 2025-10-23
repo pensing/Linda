@@ -1,0 +1,329 @@
+ <style>
+        * {
+
+            padding: 0px;
+            margin: 0px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #contact {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 200px;
+            margin-top: -300px;
+            
+        }
+
+        #contact h2{
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+      
+
+        .contact-top {
+            display: flex;
+            flex-direction: row;
+            
+
+
+        }
+
+        .name {
+            height: 50px;
+            width: 240px;
+            border-width: 0px 0px 2px 0px;
+            margin-left: 10px;
+        }
+
+        .email {
+            height: 50px;
+            width: 250px;
+            border-width: 0px 0px 2px 0px;
+        }
+
+
+        .phone-number {
+            width: 500px;
+            border-width: 0px 0px 2px 0px;
+            height: 50px;
+
+        }
+
+        .phone-number::placeholder {
+            color: grey;
+
+        }
+
+        textarea {
+            width: 500px;
+            border-width: 0px 0px 2px 0px;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+
+
+
+
+        .phone-numbers {
+            display: flex;
+            width: 500px;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+            align-items: center;
+
+
+        }
+
+        .phone-numbers span {
+            font-family: var(--font-phone);
+            font-size: 50px;
+        }
+
+
+
+        .phone {
+            display: flex;
+            background-color: #0e0240;
+            position: relative;
+            width: 90px;
+            height: 90px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+
+        }
+
+        .fa-mobile-screen-button {
+            font-size: 60px;
+            color: white;
+
+        }
+
+
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .page-wrapper {
+                width: var(--content-width-lg) !important;
+            }
+
+            #contact {
+                width: 900px;
+            }
+
+
+
+            .phone-numbers {
+                width: 250px;
+                margin-left: 50px;
+            }
+
+            .phone-numbers span {
+                font-size: 30px;
+            }
+
+            textarea {
+                width: 300px;
+                border-width: 0px 0px 2px 0px;
+            }
+
+            textarea:focus {
+                outline: none;
+            }
+
+        
+
+            .phone-number {
+                width: 300px;
+
+            }
+
+            .email {
+                width: 150px;
+            }
+
+            .name {
+                width: 140px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .page-wrapper {
+                width: var(--content-width-md) !important;
+            }
+
+            #contact {
+                width: 600px;
+
+            }
+
+            .email {
+                width: 150px;
+            }
+
+            .name {
+                width: 140px;
+            }
+
+            .phone-number {
+                width: 300px;
+            }
+
+            textarea {
+                width: 300px;
+            }
+
+            .phone-numbers span {
+                font-size: 30px;
+            }
+
+
+        }
+
+        @media (min-width: 576px) and (max-width: 767px) {
+            .page-wrapper {
+                width: var(--content-width-sm) !important;
+            }
+
+
+            #contact {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            .phone-numbers span {
+
+                font-size: 30px;
+                justify-content: center;
+
+            }
+
+            .phone {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .page-wrapper {
+                width: var(--content-width-xs) !important;
+            }
+
+            #contact {
+                flex-direction: column;
+                align-items: center;
+                
+                gap: 24px;
+            }
+
+            .phone {
+                margin-top: 20px
+            }
+
+            .phone-number {
+                width: 300px;
+            }
+
+            textarea {
+                width: 300px;
+            }
+
+            .contact-top {
+                align-items: center
+            }
+
+            .email {
+                width: 150px
+            }
+
+            .name {
+                width: 150px;
+            }
+
+            .phone-numbers span {
+                font-size: 2rem;
+            }
+
+        }
+    </style>
+
+<link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./base.css">
+<script src="https://kit.fontawesome.com/20d281916e.js"
+    crossorigin="anonymous"></script>
+
+<section id="contact">
+    <form action="verzenden.php" method="POST">
+        <br>
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <br>
+            <div class="contact-top">
+                <div>
+                    <label>Email:</label>
+                    <br>
+                    <br>
+                    <input class="email" type="email" name="email1"
+                        placeholder="Enter a Valid email adress"
+                        required>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <label>Name:</label>
+                    <br>
+                    <br>
+                    <input class="name" type="text" name="naam"
+                        placeholder="Enter your name" required>
+                </div>
+            </div>
+            <br>
+            <br>
+            <label for="telefoon">Phone-number:</label>
+            <br>
+            <br>
+            <input placeholder="Enter your phone number" class="phone-number"
+                type="tel" name="telefoon"
+                required>
+            <br>
+            <br>
+            <label>Bericht:</label>
+            <br>
+            <br>
+            <textarea name="bericht" rows="5" required
+                placeholder="Your message"></textarea>
+            <br>
+            <br>
+            <span>
+                <input placeholder="geen" type="checkbox" required /> I accept
+                Terms of Service
+            </span>
+            <br>
+            <button type="submit" name="submit">SUBMIT</button>
+        </div>
+    </form>
+    <div class="phone-numbers">
+        <div class="phone">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <br>
+        <span>1 (234) 567-891</span>
+        <br>
+        <span>1 (234) 987-654</span>
+    </div>
+</section>

@@ -1,0 +1,161 @@
+<style>
+    .therapy {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        max-height: 100vh;
+        margin-bottom: 700px;
+    }
+
+    .therapy-content {
+        position: relative;
+        top: -1200px;
+
+    }
+
+    .therapy-top {
+        background-color: #fff;
+        position: relative;
+        display: flex;
+    }
+
+    .therapy-left {
+        padding: 20px;
+        width: 450px;
+    }
+
+    .therapy-right {
+        padding: 50px;
+        width: 900px;
+        line-height: 35px;
+        height: 450px;
+
+    }
+
+
+    .blue-therapy {
+        position: relative;
+        background-color: var(--color-accent1);
+        width: 900px;
+        min-height: 900px;
+        margin-left: auto;
+        right: 0px;
+
+
+
+    }
+
+    .beige-therapy {
+        position: relative;
+        background-color: var(--color-accent2);
+        width: 1200px;
+        min-height: 350px;
+        left: 0x;
+        top: -50px;
+
+
+    }
+
+    .therapy-content img {
+        width: 100%;
+        height: 640px;
+        object-fit: cover;
+
+    }
+
+
+@media (min-width: 1200px) {
+.page-wrapper {
+    width: var(--content-width-xl) !important;
+}
+
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.page-wrapper {
+    width: var(--content-width-lg) !important;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.page-wrapper {
+    width: var(--content-width-md) !important;
+}
+
+ .therapy-top{
+    flex-direction: column;
+ }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+.page-wrapper {
+  
+    width: var(--content-width-sm) !important;
+}
+.therapy-top{
+    flex-direction: column;
+ }
+
+ .therapy-right{
+    width: 300px;
+}
+}
+
+@media (max-width: 575px) {
+.page-wrapper {
+    width: var(--content-width-xs) !important;
+}
+.therapy-top{
+    flex-direction: column;
+ }
+ 
+.therapy-right{
+    width: 300px;
+}
+
+}
+
+
+
+
+
+
+</style>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="main.css">
+<section>
+    <div class="therapy">
+        <div class="blue-therapy"></div>
+        <div class="beige-therapy"></div>
+        <div class="therapy-content page-wrapper">
+            <div class="therapy-top">
+                <div class="therapy-left">
+                    <h2>
+                        Understanding
+                        <br>
+                        group therapy
+                    </h2>
+                </div>
+                <div class="therapy-right">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Perferendis, reprehenderit nesciunt? Modi maiores
+                        deleniti ab sit eveniet aspernatur, unde dignissimos
+                        esse cumque suscipit nemo quas placeat, soluta officia
+                        quo quaerat.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Perferendis, reprehenderit nesciunt? Modi maiores
+                        deleniti ab sit eveniet aspernatur, unde dignissimos
+                        esse cumque suscipit nemo quas placeat, soluta officia
+                        quo quaerat.
+                        <br>
+                        <br>
+                        Image from <u>Freepik</u>
+                    </p>
+                    <a href="" class="button_link">learn more</a>
+                </div>
+            </div>
+            <img src="./images/srter-min.jpg" alt>
+        </div>
+    </div>
+</section>

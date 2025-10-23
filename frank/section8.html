@@ -1,0 +1,187 @@
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./base.css">
+<script src="https://kit.fontawesome.com/20d281916e.js"
+    crossorigin="anonymous"></script>
+
+<style>
+    #contact{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    
+    form{
+        width: clamp(10rem, 60%, 40rem);
+        gap: 1rem;
+        display: grid;
+        grid-template-areas:
+            "title      title   "
+            "email      name    "
+            "phone      phone   "
+            "message    message "
+            "tos        tos     "
+            "submit     submit  ";
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-title {
+        grid-area: title;
+        text-align: center;
+    }
+
+    .email {
+        grid-area: email;
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    .phone {
+        grid-area: phone;
+    }
+
+    .message {
+        grid-area: message;
+    }
+
+    .tos{
+        grid-area: tos;
+    }
+
+    .submit {
+        grid-area: submit;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    input,
+    textarea{
+        padding: 0.5rem;
+        border: none;
+        border-bottom: 2px black solid;
+        outline: none;
+    }
+
+    .phone-numbers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+        gap: 1rem;
+    }
+
+    .phone-circle{
+        background-color: var(--color-accent1);
+        font-size: 4.125rem;
+        padding: 1.5rem;
+        border-radius: 100%;
+        aspect-ratio: 1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .fa-solid {
+        color: var(--color-white);
+    }
+
+    .number-phone{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        #contact{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+    @media only screen and (max-width: 540px) {
+        #contact{
+            gap: 4rem;
+        }
+        form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+</style>
+
+<section id="contact">
+    <!-- verzenden2.php input name naar nederlands phone = telefoon, message = bericht etc veranderen -->
+    <form action="verzenden.php" method="post">
+
+        <h2 class="contact-title">Contact Us</h2>
+        <!-- label and input for Email -->
+        <div class="email container">
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email"
+                placeholder="Voer een geldig email-adres in" maxlength="50"
+                required>
+        </div>
+
+        <!-- label and input for Name -->
+        <div class="name container">
+            <label for="name">Naam</label>
+            <input name="name" id="name" type="text"
+                placeholder="Voer je naam in" required maxlength="50">
+        </div>
+
+        <!-- label for phone number -->
+        <div class="phone container">
+            <label for="phone">Phone</label>
+            <input name="phone" id="phone" type="tel"
+                placeholder="Enter your phone (e.g. +14155552675)" required
+                maxlength="50">
+        </div>
+
+        <!-- label for message -->
+        <div class="message container">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" maxlength="1000"
+                required></textarea>
+        </div>
+
+        <!-- terms of service mag je zelf bedenken -->
+        <div class="tos">
+            <input id="tos" type="checkbox" required>
+            <label for="tos">I accept the <a href="#">Terms of
+                    Service</a></label>
+        </div>
+
+        <!-- submit button -->
+        <button type="submit" name="submit"
+            class="submit">Submit</button>
+    </form>
+
+    <!-- rechterkant met telefoon nummers -->
+    <div class="phone-numbers">
+        <div class="phone-circle">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <p class="number-phone">
+            1 (234) 567-891
+        </p>
+        <p class="number-phone">
+            1 (234) 987-654
+        </p>
+    </div>
+</section>

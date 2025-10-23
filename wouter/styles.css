@@ -1,0 +1,394 @@
+/* header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .nav {
+    display: flex;
+}
+
+header .nav a {
+    text-decoration: none;
+    color: var(--color-gray);
+    position: relative;
+    bottom: 0;
+} */
+
+
+/* Section1 */
+#section1.therapy-center {
+    overflow: hidden;
+}
+
+#section1.therapy-center .container {
+    display: flex;
+}
+
+#section1.therapy-center .container .rectangle-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 400px;
+    background-color: var(--color-accent1);
+    z-index: -1;
+}
+
+#section1.therapy-center .container .text {
+    width: 450px;
+    height: 600px;
+    margin-left: 30px;
+    margin-right: 100px;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+#section1.therapy-center .container .text h1 {
+    color: var(--color-accent1);
+    font-size: 60px;
+    font-weight: 800;
+}
+
+#section1.therapy-center .container .text p {
+    color: var(--color-gray);
+    margin-top: 30px;
+    margin-bottom: 40px;
+    line-height: 2;
+}
+
+#section1.therapy-center .container .text p.freepik {
+    margin-top: 200px;
+}
+
+#section1.therapy-center .container .text a {
+    text-decoration: underline;
+    color: var(--color-gray);
+    position: relative;
+    bottom: 0;
+    padding: 0;
+}
+
+#section1.therapy-center .container .text button {
+    background-color: var(--color-accent1);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#section1.therapy-center .container .image {
+    display: flex;
+    overflow: hidden;
+    width: 700px;
+    height: 750px;
+    margin-top: 75px;
+    margin-right: 75px;
+}
+
+#section1.therapy-center .container .image img {
+    position: relative;
+    width: 700px;
+    height: 800px;
+}
+
+#section1.therapy-center .rectangle-container {
+    height: 250px;
+    width: 100%;
+}
+
+#section1.therapy-center .rectangle-container .rectangle-bottom {
+    position: relative;
+    margin-left: 500px;
+    top: -125px;
+    width: 1100px;
+    height: 250px;
+    background-color: var(--color-accent2);
+    z-index: -1;
+}
+
+
+
+/* Section2 */
+#section2.Group-therapy-workshop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#section2.Group-therapy-workshop .container h1 {
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+#section2.Group-therapy-workshop .container .cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+#section2.Group-therapy-workshop .container .cards-container .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent2);
+    width: 24%;
+    height: 175px;
+}
+
+#section2.Group-therapy-workshop .container .cards-container .card h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+}
+
+#section2.Group-therapy-workshop .container .cards-container .card img {
+    width: 80px;
+}
+
+#section2.Group-therapy-workshop .container .workshops {
+    display: flex;
+    color: var(--color-white);
+}
+
+#section2.Group-therapy-workshop .container .workshops .text-left {
+    width: 50%;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+#section2.Group-therapy-workshop .container .workshops .text-left h2 {
+    color: var(--color-white);
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#section2.Group-therapy-workshop .container .workshops .text-left ul {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+#section2.Group-therapy-workshop .container .workshops .text-left ul li:before {
+    content: '✓';
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#section2.Group-therapy-workshop .container .workshops .text-right {
+    width: 50%;
+    padding-right: 20px;
+    padding-left: 50px;
+    font-size: 28px;
+    line-height: 2;
+}
+
+#section2.Group-therapy-workshop .background-rectangle-box {
+    display: flex;
+    width: 99.1vw;
+    height: 150px;
+}
+
+#section2.Group-therapy-workshop .background-rectangle-box .background-rectangle {
+    position: relative;
+    background-color: var(--color-accent1);
+    bottom: 450px;
+    width: 100%;
+    height: 1000px;
+    z-index: -10;
+}
+
+
+
+/* Section3 */
+#section3.couples-family {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section3.couples-family .img-box {
+    margin-left: auto;
+    margin-right: 75px;
+    height: 350px;
+}
+
+#section3.couples-family .img-box img {
+    width: 800px;
+    height: 550px;
+}
+
+#section3.couples-family .background-rectangle {
+    position: absolute;
+    right: 0;
+    top: 250px;
+    z-index: -1;
+    height: 375px;
+    width: 975px;
+    background-color: var(--color-accent2);
+}
+
+#section3.couples-family .text-box {
+    background-color: var(--color-white);
+    z-index: 1;
+    width: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 75px;
+    padding-bottom: 20px;
+}
+
+#section3.couples-family .text-box h2 {
+    font-size: 50px;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+#section3.couples-family .text-box p {
+    line-height: 2;
+    color: var(--color-gray);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#section3.couples-family .text-box a {
+    font-style: none;
+    color: var(--color-gray);
+    position: static;
+    bottom: 0;
+    background-color: none;
+    padding: 0;
+    text-decoration: underline;
+}
+
+#section3.couples-family .text-box button {
+    background-color: var(--color-accent1);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+/* Section4 */
+#section4.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    height: 750px;
+}
+
+#section4.info h2 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+#section4.info p {
+    line-height: 2;
+    font-size: 19px;
+}
+
+#section4.info .box {
+    width: 32%;
+}
+
+#section4.info .left {
+    background-image: url(../images/business-executives-discussing-w.jpg);
+    background-repeat: no-repeat;
+    background-size: 525px 100%;
+    background-position: -75px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--color-white);
+}
+
+#section4.info .left h2 {
+    color: var(--color-white);
+    margin-top: 500px;
+    margin-bottom: 20px;
+}
+
+#section4.info .left p {
+    margin: 0;
+}
+
+#section4.info .left p.underline {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#section4.info .middle {
+    background-color: var(--color-accent1);
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#section4.info .middle img {
+    position: relative;
+    right: 60px;
+    width: 440px;
+    height: auto;
+}
+
+#section4.info .middle h2 {
+    color: var(--color-white);
+    margin-top: 150px;
+    margin-bottom: 35px;
+}
+
+#section4.info .middle p {
+    color: var(--color-white);
+}
+
+#section4.info .middle p.underline {
+    text-decoration: underline;
+}
+
+#section4.info .right h2 {
+    color: var(--color-black);
+    margin-bottom: 10px;
+}
+
+#section4.info .right p {
+    color: var(--color-gray);
+}
+
+#section4.info .right p.underline {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+#section4.info .right .top {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    background-color: var(--color-accent2);
+    height: 55%;
+    justify-content: center;
+}
+
+#section4.info .right .bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    height: 45%;
+    justify-content: center;
+}

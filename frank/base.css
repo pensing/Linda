@@ -1,0 +1,101 @@
+/* reset */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* base-font-size */ 
+html { font-size: 16px; }
+/* base-font-size */
+
+:root {
+    /* colors */
+    --color-white: #ffffff;
+    --color-gray: #333333;
+    --color-black: #000000;
+    --color-accent1: #0e0240;
+    --color-accent2: #bfaeb4;
+
+    /* fonts */
+    --font-default: 'Open-sans', sans-serif;
+    --font-heading: 'Palanquin Dark', Arial;
+    --font-text: 'Lato', sans-serif;
+    --font-phone: 'Montserrat', sans-serif;
+    --font-button: 'Open-sans', sans-serif;
+    --font-link: 'Open-sans', sans-serif;
+
+    /* global content width */
+    --content-width-xl: 1140px;
+    --content-width-lg: 940px;
+    --content-width-md: 720px;
+    --content-width-sm: 540px;
+    --content-width-xs: 340px;
+}
+
+.page-wrapper {
+position: relative;
+margin: 0 auto;
+}
+
+/* 
+@media (min-width: 1400px) {
+.page-wrapper {
+    width: var(--content-width-xxl) !important;
+}
+} */
+
+@media (min-width: 1200px) {
+.page-wrapper {
+    width: var(--content-width-xl) !important;
+}
+}
+
+/* 
+@media (min-width: 1200px) and (max-width: 1399px) {
+.page-wrapper {
+    width: var(--content-width-xl) !important;
+}
+} */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.page-wrapper {
+    width: var(--content-width-lg) !important;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.page-wrapper {
+    width: var(--content-width-md) !important;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+.page-wrapper {
+    width: var(--content-width-sm) !important;
+}
+}
+
+@media (max-width: 575px) {
+.page-wrapper {
+    width: var(--content-width-xs) !important;
+}
+}
+
+/* 
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+}
+*/

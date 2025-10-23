@@ -1,0 +1,68 @@
+/* Hier komt de opmaak van de standaard elementen zoals kopteksten, paragraph */
+
+/* STANDARD CLASSES */
+
+body {
+	font-family: var(--font-default);
+    color: var(--color-black);
+	background-color: var(--color-white);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	text-transform: capitalize;
+	color: var(--color-accent1);
+}
+
+h1 {
+	text-transform: uppercase;
+    font-size: xx-large;
+}
+
+p {
+	margin-bottom: 20px 0;
+}
+
+a {
+	border-radius: 25px;
+	border: none;
+	padding: 10px 15px;
+	background-color: hsla(0, 0%, 100%, 0.75);
+	color: #fff;
+	text-decoration: none;
+	bottom: 40px;
+}
+
+a:hover, a:active {
+	background-color: transparent;
+	color: hsla(0, 0%, 100%, 0.75)!important;
+	border: solid 3px hsla(0, 0%, 100%, 0.75);
+	outline: none;		
+	bottom: 37px;
+	cursor: -webkit-grab; 
+	cursor: grab;
+}
+
+/* button {} - zie CUSTOM CLASSES*/
+
+/* CUSTOM CLASSES */
+
+.button_link, button {
+    background-color: var(--color-accent1);
+    color: var(--color-white);
+}
+
+
+.button_link:hover, button:hover {
+    background-color: var(--color-accent1);
+    color: var(--color-accent1);
+}

@@ -1,0 +1,141 @@
+/* header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .nav {
+    display: flex;
+}
+
+header .nav a {
+    text-decoration: none;
+    color: var(--color-gray);
+    position: relative;
+    bottom: 0;
+} */
+
+:root {
+    --size-change: 1;
+}
+
+main {
+    width: 98vw;
+    overflow: hidden;
+}
+
+main .therapy-center {
+    display: flex;
+    height: calc(850px*var(--size-change));  
+}
+
+main .therapy-center .container .rectangle-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(500px*var(--size-change));
+    height: calc(400px*var(--size-change));
+    background-color: var(--color-accent1);
+    z-index: -1;
+}
+
+main .therapy-center .container {
+    display: flex;
+    align-items: center;
+}
+
+main .therapy-center .container .text {
+    width: calc(340px*var(--size-change));
+    height: calc(600px*var(--size-change));
+    margin-left: calc(30px*var(--size-change));
+    margin-right: calc(150px*var(--size-change));
+}
+
+main .therapy-center .container .text h1 {
+    color: var(--color-accent1);
+    font-size: calc(60px*var(--size-change));
+    font-weight: 800;
+}
+
+main .therapy-center .container .text p {
+    color: var(--color-gray);
+    margin-top: calc(30px*var(--size-change));
+    margin-bottom: calc(30px*var(--size-change));
+    line-height: calc(2*var(--size-change));
+}
+
+main .therapy-center .container .text p.freepik {
+    margin-top: calc(150px*var(--size-change));
+}
+
+main .therapy-center .container .text a {
+    text-decoration: underline;
+    color: var(--color-gray);
+    position: relative;
+    bottom: 0;
+    padding: 0;
+}
+
+main .therapy-center .container .text button {
+    background-color: var(--color-accent1);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+main .therapy-center .container .image {
+    display: flex;
+    overflow: hidden;
+    width: calc(600px*var(--size-change));
+    height: 100%;
+    margin-top: calc(125px*var(--size-change));
+    margin-right: calc(75px*var(--size-change));
+}
+
+main .therapy-center .container .image img {
+    position: relative;
+    width: calc(600px*var(--size-change));
+    height: calc(680px*var(--size-change));
+}
+
+main .therapy-center .container .rectangle-bottom {
+    position: absolute;
+    margin-left: calc(300px*var(--size-change));
+    top: calc(600px*var(--size-change));
+    width: calc(1000px*var(--size-change));
+    height: calc(250px*var(--size-change));
+    background-color: var(--color-accent2);
+    z-index: -1;
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    :root {
+        --size-change: calc(940/1140);
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    :root {
+        --size-change: calc(720/1140);
+    }
+}
+    
+    @media (min-width: 576px) and (max-width: 767px) {
+    :root {
+        --size-change: calc(540/1140);
+    }
+}
+    
+    @media (max-width: 575px) {
+    :root {
+        --size-change: calc(340/1140);
+    }
+}
