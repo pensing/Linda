@@ -1,10 +1,10 @@
 
 const sections = [
-  // "intro",
+  "intro",
   // "about",
   // "services",
   // "contact",
-  "section1",
+  // "section1",
   "section2",
   "section6",
   "section3",
