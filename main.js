@@ -1,14 +1,17 @@
 
 const sections = [
   "intro",
-  // "about",
-  // "services",
+  "expertise",
+  "education",
+  "individual_therapy",
+  "orofacial_therapy",
   // "contact",
+
   // "section1",
-  "section2",
-  "section6",
-  "section3",
-  "section7",
+  // "section2",
+  // "section6",
+  // "section3",
+  // "section7",
   "section5",
   "section4",
   // "samenwerkingen",
