@@ -1,22 +1,13 @@
-
+// voeg hier de sectienamen (=bestandsnaam) toe
 const sections = [
   "intro",
   "expertise",
   "education",
   "individual_therapy",
   "orofacial_therapy",
-  // "contact",
-
-  // "section1",
-  // "section2",
-  // "section6",
-  // "section3",
-  // "section7",
-  "section5",
-  "section4",
-  // "samenwerkingen",
-  "section8",
-  // voeg hier andere sectienamen toe
+  "vestibular_therapy",
+  "collaborations",
+  "contact",
 ];
 
 const main = document.getElementById("main-content");
