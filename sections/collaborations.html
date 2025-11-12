@@ -40,7 +40,7 @@
     }
 
     #collaborations .info .left {
-        background-image: url(./images/fysio-vd-Weide-Linda.jpg);
+        background-image: url(./images/fysio_vd_Weide_Linda_2.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: -175px 0;
@@ -72,16 +72,23 @@
 
     #collaborations .info .middle {
         background-color: var(--color-accent1);
-        overflow: hidden;
+        /* overflow: hidden;
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 20px; */
     }
 
     #collaborations .info .middle img {
         position: relative;
-        right: 60px;
-        width: 440px;
+        /* right: 60px; */
+        width: 100%;
         height: auto;
+        object-fit: contain;
+        background-color: #f7fcfe;
+        padding: 50px 30px;
+    }
+
+    #collaborations .info .middle div {
+        padding: 20px;
     }
 
     #collaborations .info .middle h3 {
@@ -98,6 +105,17 @@
     #collaborations .info .middle a.underline {
         text-decoration: underline;
         font-weight: 600;
+    }
+
+    #collaborations .info .right {
+        overflow: hidden;
+    }
+
+    #collaborations .info .right img {
+        object-fit: cover;
+        object-position: -15px -50px;
+        width: 100%;
+        scale: 1.5;
     }
 
     #collaborations .info .right h3 {
@@ -308,18 +326,18 @@
     <div class="info page-wrapper">
         <div class="left box">
             <h3>Institut für Vestibulair Rehabilitation (IVRT)</h3>
-            <p>Het IVRT is gespecialiseerd in de behandeling van duizeligheid en biedt nuttige informatie voor patiënten en therapeuten.</p>
-            <!-- <p>Ik ben gecertificeerd IVRT therapeut.</p> -->
+            <p>Het IVRT is Europa’s grootste opleidingsinstituut op het gebied van duizeligheid voor fysiotherapeuten. Het instituut biedt naast scholingen nuttige informatie voor patiënten en therapeuten.</p>
             <a href="https://www.ivrt.de/nl/" target="_blank" class="button_link">Bezoek website</a>
             <br><br>
             <a href="https://www.youtube.com/results?search_query=IVRT" target="_blank" class="button_link">Bekijk video’s</a>
         </div>
         <div class="middle box">
-            <img src="./images/jvanderweide.jpg"
-                alt="peer counseling">
-            <h3>Praktijk voor gespecialiseerde fysiotherapie Jeroen van der Weide</h3>
-            <p>Praktijk bestaande uit meerdere expertises fysiotherapeuten die afgestudeerde fysiotherapeuten kunnen ondersteunen met hun master, opererend vanuit meerdere locaties onder andere 2 locaties van het ziekenhuis MST.</p>
-            <a href="https://www.jvanderweide.nl" target="_blank" class="button_link button_link-inverse">Bezoek website</a>
+            <img src="./images/logo_jeroen.png" alt="Logo Jeroen van der Weide">
+            <div>
+                <h3>Praktijk voor gespecialiseerde fysiotherapie Jeroen van der Weide</h3>
+                <p>Praktijk Jeroen van der Weide werkt samen met, zelfstandig werkende, gespecialiseerde fysiotherapeuten. Zij hebben elk hun eigen expertise en aandachtsgebied waarbij de patiënt centraal staat. De praktijk werkt vanuit meerdere locaties, waaronder het ziekenhuis MST. Dit maakt dat de samenwerking met de medisch specialisten en andere collega’s zo optimaal mogelijk is.</p>
+                <a href="https://www.jvanderweide.nl" target="_blank" class="button_link button_link-inverse">Bezoek website</a>
+            </div>
         </div>
         <div class="right box">
             <div class="top">
@@ -329,11 +347,12 @@
                 <br><br>
                 <a href="https://www.somt.nl/" class="button_link">Website Saxion</a>
             </div>
-            <div class="bottom">
+            <img src="./../images/docent_spreker.jpeg">
+            <!-- <div class="bottom">
                 <h3>THIM Advanced Learning Platform</h3>
                 <p>THIM is gespecialiseerd in kleinschalig onderwijs, waarbij persoonlijke groei centraal staat.</p>
                 <a href="https://nl.thim.nl/" class="button_link">Bezoek website</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

@@ -9,8 +9,9 @@
 <style>
     #contact{
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
-        gap: 2rem;
+        gap: 4rem;
         margin-top: 200px;
         margin-bottom: 200px;
     }
@@ -101,6 +102,76 @@
     }
 
 
+    .contact-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      min-width: 0;
+      padding: 50px;
+      /* background-color: var(--color-accent2); */
+      background-color: #bfaeb447 !important;
+    }
+
+    .contact-name {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .contact-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: left;
+    }
+
+    .meta-item {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 8px;
+      border-radius: 999px;
+      /* background: rgba(11,116,222,0.06); */
+      color: var(--muted);
+      font-size: 21px;
+      transition: background var(--transition), color var(--transition);
+      text-decoration: none;
+    }
+
+    .meta-item:focus,
+    .meta-item:hover{
+      /* background: rgba(11,116,222,0.12); */
+      color: var(--color-accent1);
+      outline: none;
+    }
+
+    .meta-item i {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 32px;
+      background-color: var(--color-accent1);
+      /* color: var(--color-white); */
+      color: #ede8ea !important;
+      border-radius: 999px;
+      padding: 10px;
+    }
+
+    /* Visually hidden helper for accessibility */
+    .sr-only {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+
+
     @media only screen and (max-width: 768px) {
         #contact{
             flex-direction: column;
@@ -127,7 +198,7 @@
     }
 </style>
 
-<section id="contact">
+<section id="contact" class="page-wrapper">
 
     <form id="checkform" action="verzenden.php" method="post">
 
@@ -179,12 +250,37 @@
     </form>
 
     <!-- rechterkant met telefoon nummers -->
-    <div class="phone-numbers">
+    <div class="contact-body">
+        <h3 id="name-1" class="contact-name">Linda Hudepohl</h3>
+
+        <div class="contact-meta">
+          <!-- Mobiel -->
+          <a class="meta-item" href="tel:+31622741877" aria-label="Bel Linda Hudepohl mobiel">
+            <!-- <i class="fa-solid fa-phone"></i> -->
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>+31 6 22741877</span>
+          </a>
+
+          <!-- Email -->
+          <a class="meta-item" href="mailto:linda@fysio-lin.nl" aria-label="Email naar Linda Hudepohl">
+            <i class="fa-regular fa-envelope"></i>
+            <span>linda@fysio-lin.nl</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="meta-item" href="https://www.linkedin.com/in/linda-hudepohl-839235153" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profiel van Linda Hudepohl (nieuw tabblad)">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>linda-hudepohl</span>
+          </a>
+        </div>
+    </div>
+
+    <!-- <div class="">
         <div class="phone-circle">
             <i class="fa-solid fa-mobile-screen-button"></i>
         </div>
         <p class="number-phone">
             +31 6 22741877
         </p>
-    </div>
+    </div> -->
 </section>

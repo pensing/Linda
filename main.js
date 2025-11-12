@@ -2,6 +2,7 @@
 const sections = [
   "intro",
   "expertise",
+  "specialized_therapy",
   "education",
   "individual_therapy",
   "orofacial_therapy",
