@@ -46,12 +46,13 @@ main {
 }
 
 footer {
-	background-color: #333333;
+	background-color: #5b5b5b;
 	color: var(--color-white);
-	padding: 15px;
+	padding: 20px;
 	/* width: 100%; */
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
 footer nav {
@@ -60,6 +61,11 @@ footer nav {
 
 footer a {
 	color: var(--color-white);
+}
+
+footer img {
+	height: 60px;
+	padding: 0px 30px;
 }
 
 section {
@@ -179,7 +185,7 @@ button:hover {
 #topButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
+  bottom: 75px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */

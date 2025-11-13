@@ -7,13 +7,13 @@
 <script src="formcheck.js" defer></script>
 
 <style>
-    #contact{
+    #contact > div{
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
         gap: 4rem;
-        margin-top: 200px;
-        margin-bottom: 200px;
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
     
     form{
@@ -110,7 +110,7 @@
       min-width: 0;
       padding: 50px;
       /* background-color: var(--color-accent2); */
-      background-color: #bfaeb447 !important;
+      background-color: #ede8ea !important;
     }
 
     .contact-name {
@@ -154,7 +154,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 32px;
+      font-size: 24px;
       background-color: var(--color-accent1);
       /* color: var(--color-white); */
       color: #ede8ea !important;
@@ -200,9 +200,11 @@
 
 <section id="contact" class="page-wrapper">
 
+    <h2 class="contact-title">Wil je met me in contact komen?</h2>
+    <div>
+
     <form id="checkform" action="verzenden.php" method="post">
 
-        <h2 class="contact-title">Wil je met me in contact komen?</h2>
         <!-- label and input for Email -->
         <div class="email container">
             <label for="email">Email</label>
@@ -236,7 +238,7 @@
         <!-- terms of service mag je zelf bedenken -->
         <div class="tos">
             <input id="tos" type="checkbox" required>
-            <label for="tos">I accepteer de <a href="#">algemene voorwaarden</a></label>
+            <label for="tos">Ik accepteer de <a href="#">algemene voorwaarden</a></label>
         </div>
         <!-- laten staan! -->
         <div style="display:none;">
@@ -256,7 +258,6 @@
         <div class="contact-meta">
           <!-- Mobiel -->
           <a class="meta-item" href="tel:+31622741877" aria-label="Bel Linda Hudepohl mobiel">
-            <!-- <i class="fa-solid fa-phone"></i> -->
             <i class="fa-solid fa-mobile-screen-button"></i>
             <span>+31 6 22741877</span>
           </a>
@@ -269,18 +270,11 @@
 
           <!-- LinkedIn -->
           <a class="meta-item" href="https://www.linkedin.com/in/linda-hudepohl-839235153" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profiel van Linda Hudepohl (nieuw tabblad)">
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
             <span>linda-hudepohl</span>
           </a>
         </div>
     </div>
+    </div>
 
-    <!-- <div class="">
-        <div class="phone-circle">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-        </div>
-        <p class="number-phone">
-            +31 6 22741877
-        </p>
-    </div> -->
 </section>

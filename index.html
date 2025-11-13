@@ -48,9 +48,115 @@
                 <a href="">Disclaimer</a>
                 <a href="">Colofon</a>
             </nav>
+            <div>
+                <img src="./images/logo_jeroen.png" alt="Logo Jeroen">
+                <img src="./images/logo_ivrt_invers_en.png" alt="Logo IVRT">
+            </div>
+            <div>
+                &copy; <span id="year"></span> FysioLin. Alle rechten voorbehouden.
+                <script>
+                // Huidige jaar ophalen
+                const year = new Date().getFullYear();
+
+                // Jaar invoegen in het element met id "year"
+                document.getElementById("year").textContent = year;
+                </script>
+            </div>
         </footer>
 
         <button onclick="topFunction()" id="topButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<style>
+        <!-- Modal -->
+         
+    /* --- Modal Styles --- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease;
+      z-index: 100;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: white;
+      max-width: 640px;
+      width: 90%;
+      max-height: 80vh;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      animation: pop 0.25s ease;
+    }
+
+    @keyframes pop {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-content {
+      padding: 20px;
+      overflow-y: auto;
+      color: #334155;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+</style>
+        <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+            <div class="modal">
+            <header class="modal-header">
+                <h2 id="privacyTitle">Privacyverklaring</h2>
+                <button class="close-btn" id="closePrivacy" aria-label="Sluit venster"><i class="fa-solid fa-xmark"></i></button>
+            </header>
+            <div class="modal-content">
+                <p><strong>Laatste update:</strong> 12 november 2025</p>
+                <p>Wij hechten veel waarde aan uw privacy. In deze verklaring leggen we uit welke persoonlijke gegevens we verzamelen, waarom we dat doen en hoe we deze beschermen.</p>
+                <h3>1. Verzamelde gegevens</h3>
+                <p>We verzamelen alleen gegevens die u zelf aan ons verstrekt, zoals naam, telefoonnummer en e-mailadres via het contactformulier.</p>
+                <h3>2. Gebruik van gegevens</h3>
+                <p>De gegevens worden uitsluitend gebruikt om contact met u op te nemen en uw vragen te beantwoorden. We delen uw informatie nooit met derden zonder uw toestemming.</p>
+                <h3>3. Beveiliging</h3>
+                <p>We nemen passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen verlies of onbevoegde toegang.</p>
+                <h3>4. Bewaartermijn</h3>
+                <p>Persoonsgegevens worden niet langer bewaard dan noodzakelijk is voor het doel waarvoor ze zijn verzameld.</p>
+                <h3>5. Uw rechten</h3>
+                <p>U heeft het recht om uw gegevens in te zien, te corrigeren of te verwijderen. Neem hiervoor contact met ons op via <a href="mailto:privacy@example.com">privacy@example.com</a>.</p>
+                <p><em>Door gebruik te maken van onze website gaat u akkoord met deze privacyverklaring.</em></p>
+            </div>
+            </div>
+        </div>
+
 
         <script>
             // topButton werking
