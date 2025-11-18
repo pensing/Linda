@@ -1,0 +1,43 @@
+<div class="modal-overlay" id="disclaimerModal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
+  <div class="modal">
+    <header class="modal-header">
+      <h2 id="disclaimerTitle">Disclaimer</h2>
+      <button class="close-btn" id="closeDisclaimer" aria-label="Sluit venster">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </header>
+    <div class="modal-content">
+      <p>Deze website is met de grootst mogelijke zorg samengesteld. Toch kunnen er fouten of onvolledigheden voorkomen.</p>
+
+      <h3>1. Geen rechten ontleend</h3>
+      <p>Aan de inhoud van deze website kunnen geen rechten worden ontleend. De informatie wordt aangeboden zonder enige vorm van garantie of aanspraak op juistheid.</p>
+
+      <h3>2. Externe links</h3>
+      <p>Op deze website kunnen links staan naar externe websites. Wij hebben geen invloed op de inhoud daarvan en accepteren geen aansprakelijkheid voor de informatie op externe websites.</p>
+
+      <h3>3. Wijzigingen</h3>
+      <p>We behouden ons het recht voor om de inhoud op elk moment zonder voorafgaande aankondiging te wijzigen.</p>
+
+      <p><em>Gebruik van deze website betekent dat u akkoord gaat met deze disclaimer.</em></p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+    const openDisclaimer = document.getElementById('openDisclaimer');
+    const closeDisclaimer = document.getElementById('closeDisclaimer');
+    const disclaimerModal = document.getElementById('disclaimerModal');
+
+    openDisclaimer.addEventListener('click', () => disclaimerModal.classList.add('active'));
+    closeDisclaimer.addEventListener('click', () => disclaimerModal.classList.remove('active'));
+
+    disclaimerModal.addEventListener('click', (e) => {
+    if (e.target === disclaimerModal) disclaimerModal.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') disclaimerModal.classList.remove('active');
+    });
+
+</script>
