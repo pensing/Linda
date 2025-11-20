@@ -1,3 +1,6 @@
+
+const main = document.getElementById("main-content");
+
 // voeg hier de sectienamen (=bestandsnaam) toe
 const sections = [
   "intro",
@@ -11,8 +14,14 @@ const sections = [
   "contact",
 ];
 
-const main = document.getElementById("main-content");
+// voeg hier de modalnamen (=bestandsnaam) toe
+const modals = [
+  "privacy",
+  "disclaimer",
+  "colofon",
+];
 
+// Functie om sections te fetchen
 async function loadSections() {
   for (const name of sections) {
     try {
@@ -44,3 +53,78 @@ async function loadSections() {
 
 loadSections();
 
+// Functie om modals te fetchen
+async function loadModal(url) {
+try {
+const response = await fetch(url);
+if (!response.ok) throw new Error('Kan modal niet laden.');
+const html = await response.text();
+document.getElementById('modalContainer').innerHTML = html;
+
+
+// Voeg functionaliteit toe nadat de modal is geladen
+const modal = document.getElementById('privacyModal');
+const openBtn = document.getElementById('openPrivacy');
+const closeBtn = document.getElementById('closePrivacy');
+
+
+openBtn.addEventListener('click', () => modal.classList.add('active'));
+closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('active'); });
+} catch(err) {
+console.error(err);
+}
+}
+
+async function loadDisclaimerModal(url) {
+try {
+const response = await fetch(url);
+if (!response.ok) throw new Error('Kan modal niet laden.');
+const html = await response.text();
+document.getElementById('modalDisclaimerContainer').innerHTML = html;
+
+
+// Voeg functionaliteit toe nadat de modal is geladen
+const modal = document.getElementById('disclaimerModal');
+const openBtn = document.getElementById('openDisclaimer');
+const closeBtn = document.getElementById('closeDisclaimer');
+
+
+openBtn.addEventListener('click', () => modal.classList.add('active'));
+closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('active'); });
+} catch(err) {
+console.error(err);
+}
+}
+
+async function loadColofonModal(url) {
+try {
+const response = await fetch(url);
+if (!response.ok) throw new Error('Kan modal niet laden.');
+const html = await response.text();
+document.getElementById('modalColofonContainer').innerHTML = html;
+
+
+// Voeg functionaliteit toe nadat de modal is geladen
+const modal = document.getElementById('colofonModal');
+const openBtn = document.getElementById('openColofon');
+const closeBtn = document.getElementById('closeColofon');
+
+
+openBtn.addEventListener('click', () => modal.classList.add('active'));
+closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('active'); });
+} catch(err) {
+console.error(err);
+}
+}
+
+
+// Modals fetchen en toevoegen aan pagina
+loadModal('./modals/privacy.html');
+loadDisclaimerModal('./modals/disclaimer.html');
+loadColofonModal('./modals/colofon.html');
