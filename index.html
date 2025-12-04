@@ -33,12 +33,19 @@
                 <img src="./images/logo_fysio_lin.png" alt="Logo">
             </div>
             <nav>
-                <a href="#">Home</a>
-                <a href="#intro">Over</a>
-                <a href="#expertise">Expertises</a>
-                <a href="#education">Docent/spreker</a>
-                <a href="#collaborations">Samenwerkingen</a>
-                <a href="#contact">Contact</a>
+                <!-- Hamburger icon voor mobiel -->
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#intro">Over</a></li>
+                    <li><a href="#expertise">Expertises</a></li>
+                    <li><a href="#education">Docent/spreker</a></li>
+                    <li><a href="#collaborations">Samenwerkingen</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </header>
         <main id="main-content"></main>
@@ -74,7 +81,23 @@
         <div id="modalColofonContainer"></div>
 
         <script>
-            
+
+        // mobiel menu werking
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
+
+        mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+        
+        // Sluit menu bij klik op een link
+        navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+        });
+
         // topButton werking
 
         // Get the button:

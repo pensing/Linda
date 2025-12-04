@@ -48,7 +48,7 @@
 
     #education .page-wrapper div {
         display: flex;
-        background-color: white;
+        /* background-color: white; */
         /* display: grid;
         grid-template-areas:
             "h2     text"
@@ -103,6 +103,7 @@
         display: flex;
         flex-direction: column;
         /* gap: 1.5rem; */
+        background-color: var(--color-white);
     }
 
     #education p{
@@ -129,21 +130,39 @@
   }
     }
 
-    @media only screen and (max-width: 540px) {
+    @media only screen and (max-width: 575px) {
 
-        #education .section-wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 90%;
+        #education .blue {
+            height: 10%;
+            bottom: 0px;
         }
 
-          #education h2{
-            font-size: 2rem;
-          }
-          
-          .beige{
-            max-height: 25%;
-          }
+        #education .page-wrapper div {
+            /* display: flex; */
+            flex-direction: column;
+            align-items: center;
+            /* width: 90%; */
+            /* background-color: transparent; */
+        }
+
+        #education .page-wrapper div img {
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        #education .page-wrapper > img {
+            width: 100%;
+            top: 0;
+            padding: 0 2rem;
+        }
+
+        #education h2{
+        font-size: 2rem;
+        }
+        
+        .beige{
+        max-height: 25%;
+        }
     }
 </style>
 

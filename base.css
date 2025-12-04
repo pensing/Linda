@@ -32,7 +32,9 @@ html {
     --content-width-lg: 940px;
     --content-width-md: 720px;
     --content-width-sm: 540px;
-    --content-width-xs: 340px;
+    --content-width-xs: 440px;
+    --content-width-vs: 400px;
+    --content-width-xxs: 340px;
 }
 
 .page-wrapper {
@@ -78,9 +80,27 @@ margin: 0 auto;
 }
 }
 
-@media (max-width: 575px) {
+@media (min-width: 480px) and (max-width: 575px) {
 .page-wrapper {
     width: var(--content-width-xs) !important;
+}
+}
+
+@media (min-width: 420px) and (max-width: 479px) {
+.page-wrapper {
+    width: var(--content-width-vs) !important;
+}
+}
+
+@media (min-width: 376px) and (max-width: 419px) {
+.page-wrapper {
+    width: var(--content-width-xxs) !important;
+}
+}
+
+@media (max-width: 375px) {
+.page-wrapper {
+    width: var(--content-width-xxs) !important;
 }
 }
 
@@ -97,7 +117,20 @@ margin: 0 auto;
 
 }
 
+-- Grote smartphones / phablets --
+
 @media (max-width: 575px) {
 
 }
+
+-- Standaard smartphones --
+@media (max-width: 480px) {
+
+}
+
+-- Kleine smartphones --
+@media (max-width: 360px) {
+
+}
+
 */

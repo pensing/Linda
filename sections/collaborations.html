@@ -272,21 +272,22 @@
 
     @media (max-width: 575px) {
         #collaborations .info {
+            flex-direction: column;
             flex-wrap: wrap;
-            margin-top: 100px;
+            margin-top: 0;
         }
 
         #collaborations .info .left {
             width: 100%;
             background-size: 100% auto;
             background-position: 0 0;
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 0;
+            padding-right: 0;
             height: 500px;
         }
 
         #collaborations .info .left h3 {
-            margin-top: 250px;
+            margin-top: 0;
             font-weight: 600;
             font-size: 25px;
             line-height: 1.2;
@@ -302,13 +303,12 @@
         }
 
         #collaborations .info .middle img {
-            width: 400px;
-            right: 50px;
-
+            width: 100%;
+            /* right: 50px; */
         }
 
         #collaborations .info .middle h3 {
-            margin-top: 50px;
+            margin-top: 0;
             line-height: 1.2;
         }
 
@@ -316,6 +316,11 @@
             display: flex;
             flex-wrap: wrap;
             width: 100%;
+        }
+
+        #collaborations .info .right img {
+            scale: unset;
+            object-position: 0 0;
         }
 
         #collaborations .info .right .bottom {

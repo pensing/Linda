@@ -30,6 +30,7 @@ header {
 header nav a {
 	font-size: 1.3rem;
 	font-weight: 400;
+	display: inline-block;
 }
 
 header nav a:hover {
@@ -153,6 +154,43 @@ a:active {
 	height: 100%;
 }
 
+.navbar {
+	position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+}
+
+/* Menu items horizontaal standaard */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  /* color: #fff; */
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav-links li a:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Hamburger icon standaard verborgen */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  padding: 20px;
+  /* color: #fff; */
+  cursor: pointer;
+}
+
+/* Knoppen */
 .button_link,
 button {
 	display: inline-block;
@@ -193,7 +231,7 @@ button:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 75px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
+  right: 50px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
@@ -311,4 +349,45 @@ height: 32px;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+@media (max-width: 575px) {
+
+h2 {
+	font-size: 2.5rem;
+}
+
+footer {
+	flex-direction: column;
+}
+
+.logo {
+	height: 80px;
+}
+
+.nav-links {
+	position: absolute;
+	left: 0;
+	top: 80px;
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 0px 10px silver;
+	z-index: 999;
+}
+
+.nav-links.active {
+	display: flex;
+}
+
+.nav-links li {
+	text-align: center;
+	padding: 0.5rem 0;
+}
+
+.menu-toggle {
+	display: block;
+}
+
 }
