@@ -1,0 +1,177 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="main.css">
+
+<style>
+    #education {
+        position: relative;
+        padding: 1rem 0;
+        /* margin-top: 200px; */
+    }
+
+    #education .blue {
+        position: absolute;
+        width: 60%;
+        height: 20%;
+        background-color: var(--color-accent1);
+        bottom: 150px;
+        left: 0;
+        z-index: -1;
+    }
+
+    #education .beige {
+        height: 25%;
+        width: 60%;
+        background-color: var(--color-accent2);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    #education .page-wrapper {
+        width: 71%;
+        margin: 7.5% auto;
+        /* background-color: white; */
+        display: flex;
+        flex-direction: column;
+        /* display: grid;
+        grid-template-areas:
+            "h2     text"
+            "img    img";
+        grid-template-columns: 40% auto;
+        gap: 2rem; */
+    }
+
+    #education .page-wrapper div {
+        display: flex;
+        background-color: white;
+        /* display: grid;
+        grid-template-areas:
+            "h2     text"
+            "img    img";
+        grid-template-columns: 40% auto;
+        gap: 2rem; */
+    }
+
+
+    #education .page-wrapper div img {
+        width: 50%;
+        /* margin: 7.5% auto;
+        background-color: white; */
+        /* display: grid;
+        grid-template-areas:
+            "h2     text"
+            "img    img";
+        grid-template-columns: 40% auto;
+        gap: 2rem; */
+    }
+
+    #education .page-wrapper > img {
+        width: 60%;
+        position: relative;
+        align-self: flex-end;
+        top: -80px;
+        bottom: 50px;
+    }
+
+    #education img {
+        width: 100%;
+        grid-area: img;
+        
+    }
+
+    #education h2 {
+        color: var(--color-accent1);
+    }
+
+    #education a.freepik {
+        color: unset;
+        text-decoration: underline;
+    }
+
+    .button_left {
+        margin-left: 0;
+    }
+
+    #education .text-wrapper {
+        grid-area: text;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        /* gap: 1.5rem; */
+    }
+
+    #education p{
+         line-height: 30px;
+    }
+
+    @media only screen and (max-width: 1000px)    {
+        #education h2{
+            font-size: 2rem;
+        }
+    }
+
+
+    @media only screen and (max-width: 720px) {
+
+        #education .section-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+        }
+
+      #education h2{
+            font-size: 2rem;
+  }
+    }
+
+    @media only screen and (max-width: 540px) {
+
+        #education .section-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+        }
+
+          #education h2{
+            font-size: 2rem;
+          }
+          
+          .beige{
+            max-height: 25%;
+          }
+    }
+</style>
+
+<section id="education">
+
+    <div class="beige"></div>
+    <div class="blue"></div>
+
+    <!-- <div class="section-wrapper"> -->
+    <div class="page-wrapper">
+        <div>
+            <img src="./images/linda2.jpeg">
+            <div class="text-wrapper">
+                <h2>Docent En Spreker</h2>
+
+                <p>Blijven leren is essentieel in de fysiotherapie. Ik deel mijn expertise niet alleen in de praktijk, maar ook graag met collega’s en studenten.</p>
+                <p>Ik geef scholingen en lezingen over duizeligheid en aanverwante onderwerpen. Ik ben verbonden als docent aan Europa’s grootste opleidingsinstituut voor fysiotherapeuten op het gebied van duizeligheid (IVRT)</p>
+                <p>Daarnaast draag ik als gastdocent, examinator en stagedocent bij aan de volgende generatie specialisten bij onderwijsinstellingen zoals Saxion en SOMT (Master Musculoskeletaal/Manuele Therapie). Zo ben ik direct betrokken bij de nieuwste ontwikkelingen in het vakgebied.</p>
+                <p>Zoekt u een docent met diepgaande kennis in duizeligheid en aanverwante onderwerpen voor een training, gastles of lezing? Neem contact met mij op voor de mogelijkheden, ik denk graag met u mee.</p>
+        
+                <a href="#" class="button_link button_left">maak een afspraak</a>
+            </div>
+        </div>
+
+        <img src="./images/orofaciale_therapy.jpg" alt>
+
+    </div>
+</section>
+</body>
+
+</html>
