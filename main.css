@@ -54,6 +54,13 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.footer-item {
+    /* flex: 1; */
+	flex: 1 1 0;
+    width: auto;
 }
 
 footer nav {
@@ -97,6 +104,7 @@ h2 {
 	font-weight: 800;
     line-height: 1.2;
 	margin-bottom: 2rem;
+	text-align: left;
 }
 
 h3 {
@@ -358,7 +366,26 @@ h2 {
 }
 
 footer {
-	flex-direction: column;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
+}
+
+.footer-item {
+	flex: 0 0 50%;
+	width: 50%; /* standaard 2 per rij */
+}
+
+.footer-item:nth-child(3) {
+	flex: 0 0 100%;
+    width: 100%; /* derde element volledige breedte */
+	text-align: center;
+	padding-top: 20px;
+	font-size: 14px;
+}
+
+footer img {
+	width: 100%;
+	height: auto;
 }
 
 .logo {
@@ -388,6 +415,11 @@ footer {
 
 .menu-toggle {
 	display: block;
+}
+
+#topButton {
+    bottom: 200px;
+	right: 25px;
 }
 
 }
