@@ -29,28 +29,30 @@
     <body>
         <!-- <header class="page-wrapper"> -->
         <header class="full-header">
-            <div class="logo">
-                <img src="./images/logo_fysio_lin.png" alt="Logo">
-            </div>
-            <nav>
-                <!-- Hamburger icon voor mobiel -->
-                <div class="menu-toggle" id="mobile-menu">
-                    <i class="fas fa-bars"></i>
+            <div class="page-wrapper">
+                <div class="logo">
+                    <img src="./images/logo_fysio_lin.png" alt="Logo">
                 </div>
+                <nav>
+                    <!-- Hamburger icon voor mobiel -->
+                    <div class="menu-toggle" id="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
 
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#intro">Over</a></li>
-                    <li><a href="#expertise">Expertises</a></li>
-                    <li><a href="#education">Docent/spreker</a></li>
-                    <li><a href="#collaborations">Samenwerkingen</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#intro">Over</a></li>
+                        <li><a href="#expertise">Expertises</a></li>
+                        <li><a href="#education">Docent/spreker</a></li>
+                        <li><a href="#collaborations">Samenwerkingen</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main id="main-content"></main>
         <footer>
-            <div class="footer-top">
+            <div class="footer-top page-wrapper">
                 <nav class="">
                     <button class="footer-button" id="openPrivacy"><i class="fa-solid fa-shield-halved"></i> Privacyverklaring</button>
                     <button class="footer-button" id="openDisclaimer"><i class="fa-solid fa-circle-info"></i> Disclaimer</button>
@@ -71,16 +73,18 @@
                 document.getElementById("year").textContent = year;
                 </script>
             </div>
-        </footer>
+            <div class="page-wrapper">
+                <button onclick="topFunction()" id="topButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+    
+            <!-- <div class="modal-content" id="disclaimerContent"></div> -->
+    
+            <!-- Containers waar modals via fetch wordt geladen -->
+            <div id="modalContainer"></div>
+            <div id="modalDisclaimerContainer"></div>
+            <div id="modalColofonContainer"></div>
+            </footer>
 
-        <button onclick="topFunction()" id="topButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-        <!-- <div class="modal-content" id="disclaimerContent"></div> -->
-
-        <!-- Containers waar modals via fetch wordt geladen -->
-        <div id="modalContainer"></div>
-        <div id="modalDisclaimerContainer"></div>
-        <div id="modalColofonContainer"></div>
 
         <script>
 

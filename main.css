@@ -20,11 +20,19 @@ body {
 }
 
 header {
+	/* display: flex;
+	justify-content: space-between;
+	align-items: center; */
+	/* padding: 10px 0; */
+	box-shadow: 0px 0px 10px silver;
+}
+
+header div {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	/* padding: 10px 0; */
-	box-shadow: 0px 0px 10px silver;
+	/* box-shadow: 0px 0px 10px silver; */
 }
 
 header nav a {
@@ -139,7 +147,7 @@ a {
 a:hover,
 a:active {
 	background-color: transparent;
-	color: hsla(0, 0%, 100%, 0.75);
+	/* color: hsla(0, 0%, 100%, 0.75); */
 	/* border: solid 3px hsla(0, 0%, 100%, 0.75);
 	outline: none;
 	bottom: 37px; */
@@ -248,7 +256,7 @@ button:hover {
 #topButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 75px; /* Place the button at the bottom of the page */
+  bottom: 20px; /* Place the button at the bottom of the page */
   right: 50px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
