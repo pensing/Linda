@@ -129,7 +129,20 @@
       flex-direction: column;
       gap: 10px;
       flex-wrap: wrap;
-      align-items: left;
+      /* align-items: left; */
+      cursor: pointer;
+    }
+
+    a[href] {
+    cursor: pointer;
+    }
+
+    a[href^="tel"] {
+    cursor: pointer;
+    }
+
+    a[href^="mailto"] {
+    cursor: pointer;
     }
 
     .meta-item {
@@ -265,7 +278,7 @@
             class="submit">Verstuur</button>
     </form>
 
-    <!-- rechterkant met telefoon nummers -->
+    <!-- linkerkant met telefoon nummers -->
     <div class="contact-body">
         <h3 id="name-1" class="contact-name">Linda Hudepohl</h3>
 

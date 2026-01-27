@@ -6,6 +6,7 @@
 
 <style>
     #vestibular_therapy {
+        position: relative;
       padding: 2rem  0rem;
       max-width: 100%;
       display: flex;
@@ -16,7 +17,7 @@
 
     #vestibular_therapy .image-wrapper {
         position: relative;
-        aspect-ratio: 1.2;
+        /* aspect-ratio: 1.2; */
         width: 100%;
         /* flex-basis: 50%; */
         min-width: 50%;
@@ -41,7 +42,7 @@
     }
 
     #vestibular_therapy img {
-        position: absolute;
+        position: relative;
         width: 80%;
         /* height: 87.5%; */
         top: 0;
@@ -66,13 +67,13 @@
     #vestibular_therapy {
             display: flex;
             flex-direction: column;
-            padding: 4rem 0rem;
+            padding: 6rem 0rem 1rem;
     }
 
     #vestibular_therapy .text-wrapper {
         /* line-height: 2rem; */
         /* line heights weg en/of flex basis terug naar 60%???? */
-        padding: 3rem 0 0;
+        padding: 5rem 0 0;
     }
         
     #vestibular_therapy h2{
@@ -82,17 +83,22 @@
     }
 
     #vestibular_therapy .image-wrapper {
-        aspect-ratio: 1.4;
+        /* aspect-ratio: 1.4; */
     }
     }
 
-    @media only screen and (max-width: 540px) {
+    @media only screen and (max-width: 575px) {
         #vestibular_therapy {
-            min-width: 90%;
+            /* min-width: 90%; */
+        }
+        
+        #vestibular_therapy .blue {
+            top: 40%;
         }
         
         #vestibular_therapy .beige {
-            max-height: 86%;
+            max-height: 100%;
+            top: 30%;
         }
     }
 

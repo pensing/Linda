@@ -169,9 +169,9 @@
 
         #intro .container .rectangle-top {
             width: 300px;
-            height: 380px;
+            height: 300px;
             right: 0;
-            top: 580px;
+            top: 820px;
         }
 
         #intro .container .image {
@@ -189,7 +189,7 @@
             position: absolute;
             z-index: -1;
             height: 150px;
-            top: 1020px;
+            top: 1270px;
         }
 
         #intro .container .rectangle-container .rectangle-bottom {
@@ -210,6 +210,8 @@
             width: 100%;
             margin-top: 30px;
             margin-bottom: 20px;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         #intro .container .text h1 {
@@ -217,13 +219,12 @@
             line-height: 1.2;
         }
 
-
         #intro .container .rectangle-top {
             width: 260px;
             height: 250px;
             right: 0;
             /* top: 910px; */
-            top: 870px;
+            top: 720px;
         }
 
         #intro .container .image {
@@ -251,6 +252,18 @@
             top: 0;
             height: 150px;
             width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #intro .container .rectangle-top {
+            top: 780px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        #intro .container .rectangle-top {
+            top: 840px;
         }
     }
 </style>

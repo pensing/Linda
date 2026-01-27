@@ -119,15 +119,40 @@
 
     @media only screen and (max-width: 720px) {
 
+        #education .page-wrapper div {
+            /* display: flex; */
+            flex-direction: column;
+            align-items: center;
+            /* width: 90%; */
+            /* background-color: transparent; */
+        }
+
+        #education .page-wrapper div img {
+            width: 70%;
+        }
+
+        #education .page-wrapper > img {
+            width: 90%;
+            top: 0;
+            /* padding: 0 2rem; */
+        }
+
         #education .section-wrapper {
             display: flex;
             flex-direction: column;
             width: 90%;
         }
 
-      #education h2{
+        #education .blue {
+            width: 60%;
+            height: 15%;
+            bottom: 0px;
+            left: 0;
+        }
+
+        #education h2{
             font-size: 2rem;
-  }
+        }
     }
 
     @media only screen and (max-width: 575px) {
@@ -137,9 +162,13 @@
             bottom: 0px;
         }
 
+        #education .text-wrapper {
+            padding: 30px 0;
+        }
+
         #education .page-wrapper div {
             /* display: flex; */
-            flex-direction: column;
+            /* flex-direction: column; */
             align-items: center;
             /* width: 90%; */
             /* background-color: transparent; */
