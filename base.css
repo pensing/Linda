@@ -28,13 +28,13 @@ html {
     --font-link: 'Open-sans', sans-serif;
 
     /* global content width */
-    --content-width-xl: 1140px;
-    --content-width-lg: 940px;
-    --content-width-md: 720px;
-    --content-width-sm: 540px;
-    --content-width-xs: 440px;
-    --content-width-vs: 400px;
-    --content-width-xxs: 340px;
+    --content-width-xl: 1140px;     /* mq 1200px */
+    --content-width-lg: 940px;     /* mq 992px */
+    --content-width-md: 720px;     /* mq 768px */
+    --content-width-sm: 540px;     /* mq 576px */
+    --content-width-xs: 440px;     /* mq 420px */
+    --content-width-vs: 400px;     /* mq 420px? */
+    --content-width-xxs: 340px;     /* mq 420px? */
 }
 
 .page-wrapper {

@@ -11,20 +11,19 @@
     }
 
     #intro .container .rectangle-top {
-        position: relative;
-        margin: 0 0 0 auto;
-        /* right: 0;
-        top: 0; */
-        width: 80%;
-        height: 400px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 45%;
+        height: 45%;
         background-color: var(--color-accent1);
         z-index: -1;
     }
 
     #intro .container .text {
-        width: 55%;
+        width: 45%;
         padding-left: 30px;
-        padding-right: 150px;
+        padding-right: 5%;
         margin-top: 100px;
         font-size: 20px;
     }
@@ -51,10 +50,9 @@
 
     #intro .container .image {
         display: flex;
-        flex-direction: column;
         overflow: hidden;
-        width: 45%;
-        /* height: 750px; */
+        width: 46%;
+        height: 750px;
         margin-top: 75px;
     }
 
@@ -62,15 +60,12 @@
         position: relative;
         right: 50px;
         bottom: 20px;
-        /* height: 800px; */
-        margin-top: -330px;
+        height: 800px;
     }
 
-    #intro .rectangle-container {
+    #intro .container .rectangle-container {
         height: 250px;
-        width: calc(((100% - 1140px) / 2) + 866px);
-        background-color: var(--color-accent2);
-        margin: -150px 0 0 auto;
+        width: 100%;
     }
 
     #intro .container .rectangle-container .rectangle-bottom {
@@ -87,7 +82,6 @@
     @media (min-width: 992px) and (max-width: 1199px) {
         #intro .container .text {
             margin-top: 30px;
-            padding-right: 100px;
         }
 
         #intro .container .text h1 {
@@ -103,12 +97,12 @@
         #intro .container .image {
             margin-top: 60px;
             height: 100%;
-            /* background-color: black; */
+            background-color: black;
         }
 
         #intro .container .image img {
-            /* right: 10px; */
-            /* height: 640px; */
+            right: 10px;
+            height: 640px;
             bottom: 0;
         }
 
@@ -126,8 +120,6 @@
     @media (min-width: 768px) and (max-width: 991px) {
         #intro .container .text {
             margin-top: 30px;
-            padding-right: 60px;
-            width: 55%;
         }
 
         #intro .container .text h1 {
@@ -136,24 +128,21 @@
         }
 
         #intro .container .text p {
-            line-height: 1.6;
-            font-size: 16px;
+            line-height: 1.8;
+            font-size: 18px;
         }
 
         #intro .container .image {
             margin-top: 50px;
             height: 100%;
-            width: 45%;
         }
 
         #intro .container .image img {
-            /* height: 505px; */
+            height: 505px;
         }
 
-        #intro .rectangle-container {
+        #intro .container .rectangle-container {
             height: 150px;
-            width: calc(((100% - 940px) / 2) + 600px);
-            margin: -90px 0 0 auto;
         }
 
         #intro .container .rectangle-container .rectangle-bottom {
@@ -180,9 +169,9 @@
 
         #intro .container .rectangle-top {
             width: 300px;
-            /* height: 300px; */
+            height: 300px;
             right: 0;
-            /* top: 820px; */
+            top: 820px;
         }
 
         #intro .container .image {
@@ -192,7 +181,7 @@
         }
 
         #intro .container .image img {
-            /* height: 505px; */
+            height: 505px;
             justify-self: flex-end;
         }
 
@@ -231,11 +220,11 @@
         }
 
         #intro .container .rectangle-top {
-            /* width: 260px; */
-            /* height: 250px; */
+            width: 260px;
+            height: 250px;
             right: 0;
             /* top: 910px; */
-            /* top: 720px; */
+            top: 720px;
         }
 
         #intro .container .image {
@@ -247,7 +236,7 @@
         }
 
         #intro .container .image img {
-            /* height: 420px; */
+            height: 420px;
             justify-self: flex-end;
         }
 
@@ -268,13 +257,13 @@
 
     @media (max-width: 480px) {
         #intro .container .rectangle-top {
-            /* top: 780px; */
+            top: 780px;
         }
     }
 
     @media (max-width: 420px) {
         #intro .container .rectangle-top {
-            /* top: 840px; */
+            top: 840px;
         }
     }
 </style>
@@ -284,8 +273,9 @@
     <link rel="stylesheet" href="../main.css">
 </head> -->
 
-<section id="intro">
-    <div class="container page-wrapper">
+<section id="intro" class="page-wrapper">
+    <div class="container">
+        <div class="rectangle-top"></div>
         <div class="text">
             <!-- <h1><span>Fysio</span><span>Lin</span></h1> -->
             <h1>Fysio<br>Lin</h1>
@@ -295,11 +285,10 @@
             <a href="#contact" class="button_link">contact</a>
         </div>
         <div class="image">
-            <div class="rectangle-top"></div>
             <img src="./images/fysio_vd_Weide_Linda_2.jpeg" alt="Therapy Center">
         </div>
-    </div>
-    <div class="rectangle-container">
-        <!-- <div class="rectangle-bottom"></div> -->
+        <div class="rectangle-container">
+            <div class="rectangle-bottom"></div>
+        </div>
     </div>
 </section>
