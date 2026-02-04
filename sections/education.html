@@ -60,6 +60,7 @@
 
     #education .page-wrapper div img {
         width: 50%;
+        height: 50%;
         /* margin: 7.5% auto;
         background-color: white; */
         /* display: grid;
@@ -110,14 +111,24 @@
          line-height: 30px;
     }
 
-    @media only screen and (max-width: 1000px)    {
-        #education h2{
-            font-size: 2rem;
+    @media only screen and (max-width: 1199px)    {
+        #education .blue {
+            bottom: 30px;
+        }
+        #education .page-wrapper > img {
+            top: unset;
+            bottom: -10px;
         }
     }
 
+    @media only screen and (max-width: 992px)    {
+        #education h2{
+            font-size: 2rem;
+        }
+    /* }
 
-    @media only screen and (max-width: 768px) {
+
+    @media only screen and (max-width: 768px) { */
 
         #education .page-wrapper div {
             /* display: flex; */

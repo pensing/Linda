@@ -123,9 +123,11 @@
 
     #collaborations .info .right img {
         object-fit: cover;
-        object-position: -15px -50px;
+        /* object-position: -15px -50px; */
+        object-position: -240px -110px;
         width: 100%;
-        scale: 1.5;
+        height: 100%;
+        /* scale: 1.5; */
     }
 
     #collaborations .info .right h3 {
@@ -148,7 +150,7 @@
         flex-direction: column; */
         padding: 20px;
         background-color: var(--color-accent2);
-        height: 55%;
+        /* height: 55%; */
         justify-content: center;
     }
 
@@ -167,7 +169,18 @@
         }
 
         #collaborations .info .left h3 {
-            margin-top: 450px;
+            /* margin-top: 450px; */
+        }
+        #collaborations .info .right img {
+            object-fit: cover;
+            object-position: -220px -170px;
+            width: 100%;
+            height: 100%;
+            scale: unset;
+        }
+        
+        #collaborations .info .middle img {
+        padding: 20px 15px;
         }
     }
 
@@ -176,17 +189,33 @@
             flex-wrap: wrap;
         }
 
+        #collaborations .info .middle {
+            flex: 0 0 100%;
+        }
+        
+        #collaborations .info .middle img {
+        padding: 50px 100px;
+        }
+
         #collaborations .info .left {
-            width: 49%;
-            background-size: 350px 100%;
-            background-position: 0 0;
-            padding-left: 30px;
-            padding-right: 30px;
-            height: 600px;
+            /* flex: 0 0 50%; */
+        }
+        
+        #collaborations .info .right {
+            flex: 0 0 50%;
+        }
+    
+        #collaborations .info .left {
+            /* width: 49%; */
+            /* background-size: 350px 100%; */
+            /* background-position: 0 0; */
+            padding-left: 0;
+            padding-right: 0;
+            /* height: 600px; */
         }
 
         #collaborations .info .left h3 {
-            margin-top: 300px;
+            /* margin-top: 300px; */
             font-weight: 800;
             font-size: 30px;
             line-height: 1.2;
@@ -197,18 +226,18 @@
         }
 
         #collaborations .info .middle {
-            width: 49%;
+            /* width: 49%; */
         }
 
         #collaborations .info .middle h3 {
-            margin-top: 50px;
+            margin-top: unset;
             line-height: 1.2;
         }
 
         #collaborations .info .right {
             display: flex;
             flex-wrap: wrap;
-            width: 100%;
+            /* width: 100%; */
         }
 
         #collaborations .info .right .bottom {
@@ -220,20 +249,20 @@
     @media (min-width: 576px) and (max-width: 767px) {
         #collaborations .info {
             flex-wrap: wrap;
-            margin-top: 100px;
+            /* margin-top: 100px; */
         }
 
         #collaborations .info .left {
             width: 100%;
             background-size: 100% auto;
             background-position: 0 0;
-            padding-left: 30px;
-            padding-right: 30px;
-            height: 800px;
+            padding-left: 0;
+            padding-right: 0;
+            /* height: 800px; */
         }
 
         #collaborations .info .left h3 {
-            margin-top: 580px;
+            /* margin-top: 580px; */
             font-weight: 800;
             font-size: 30px;
             line-height: 1.2;
@@ -249,8 +278,7 @@
         }
 
         #collaborations .info .middle img {
-            width: 620px;
-
+            /* width: 620px; */
         }
 
         #collaborations .info .middle h2 {
@@ -264,9 +292,27 @@
             width: 100%;
         }
 
+        #collaborations .info .right img {
+            scale: unset;
+            object-position: unset;
+        }
+
         #collaborations .info .right .bottom {
             padding-top: 40px;
             margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #collaborations .info {
+            flex-direction: column;
+            /* flex-wrap: wrap;
+            margin-top: 0; */
+        }
+
+        #collaborations .info .middle h3 {
+            margin-top: 0;
+            line-height: 1.2;
         }
     }
 
