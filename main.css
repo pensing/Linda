@@ -68,7 +68,7 @@ footer {
 
 .footer-top {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	gap: 20px;
 }
@@ -442,6 +442,9 @@ footer nav button {
 }
 		
 .footer-top > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 	padding-left: 20px;
 	border-left: solid 1px var(--color-white);
 }
