@@ -92,6 +92,7 @@ footer a {
 
 footer img {
 	height: 60px;
+	max-width: fit-content;
 	padding: 0px 30px;
 }
 
@@ -469,8 +470,8 @@ footer {
 }
 
 footer img {
-	width: 100%;
-	height: auto;
+	/* width: 100%; */
+	/* height: auto; */
 	padding: 5px 0;
 }
 
