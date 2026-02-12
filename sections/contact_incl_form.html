@@ -8,41 +8,17 @@
 
 <style>
 
-    #contact .blue {
-        position: relative;
-        width: 50%;
-        height: 200px;
-        background-color: var(--color-accent1);
-        /* bottom: 150px; */
-        right: 0;
-        z-index: -1;
-        margin-right: 0;
-        margin-left: auto;
-    }
-
-    #contact .beige {
-        height: 200px;
-        width: 50%;
-        background-color: var(--color-accent2);
-        position: relative;
-        left: 0;
-        /* top: 0; */
-        z-index: -1;
-        margin-right: auto;
-        margin-left: 0;
-    }
-
     #contact {
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
     
-    #contact div {
-        /* display: flex;
+    #contact > div {
+        display: flex;
         flex-direction: row-reverse;
-        justify-content: center; */
-        /* gap: 4rem; */
-        /* margin-top: 50px;
-        margin-bottom: 100px; */
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
     
     form{
@@ -132,24 +108,20 @@
 
 
     .contact-body {
-      /* flex: 1 1 auto; */
-      /* display: flex; */
-      /* flex-direction: column; */
-      /* gap: 3rem; */
-      width: fit-content;
-      /* min-width: 0; */
-      padding: 80px;
-      margin: -100px auto;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      min-width: 0;
+      padding: 50px;
       /* background-color: var(--color-accent2); */
       background-color: #ede8ea !important;
-      z-index: 999;
     }
 
     .contact-name {
-      font-size: 40px;
+      font-size: 32px;
       font-weight: 600;
       line-height: 1;
-      margin-bottom: 50px;
     }
 
     .contact-meta {
@@ -222,30 +194,27 @@
         #contact div {
             gap: 2rem;
         }
-
         .contact-body {
-            /* padding: 20px; */
+            padding: 20px;
             font-size: 18px;
         }
-
         .contact-body .meta-item{
             font-size: 18px;
         }
     }
-
     @media only screen and (max-width: 767px) {
         #contact{
             flex-direction: column;
             align-items: center;
         }
 
-        #contact div{
-            /* flex-direction: column-reverse;
-            align-items: center; */
+        #contact > div{
+            flex-direction: column-reverse;
+            align-items: center;
         }
 
         .contact-body {
-            /* width: 100%; */
+            width: 100%;
         }
 
         form {
@@ -255,11 +224,8 @@
         }
     }
 
-    @media only screen and (max-width: 575px) {
 
-        .contact-body {
-            padding: 20px;
-        }
+    @media only screen and (max-width: 575px) {
 
         #contact{
             gap: 4rem;
@@ -271,61 +237,92 @@
             /* flex-direction: column; */
         }
 
-        #contact div {
+        #contact > div {
             /* display: flex; */
             /* flex-direction: column-reverse; */
         }
 
     }
-
-    @media only screen and (max-width: 419px) {
-
-        .contact-body {
-            margin: unset;
-        }
-
-        #contact .blue, #contact .beige {
-            display: none;
-        }
-
-    }
-
-
 </style>
 
 <section id="contact" class="page-wrapper">
 
     <h2 class="contact-title">Wil je met me in contact komen?</h2>
-    <!-- <div> -->
-        <!-- contactgegevens -->
-        <div class="blue"></div>
-    
-        <div class="contact-body">
-            <h2 id="name-1" class="contact-name">Linda Hudepohl</h2>
+    <div>
 
-            <div class="contact-meta">
-            <!-- Mobiel -->
-            <a class="meta-item" href="tel:+31622741877" aria-label="Bel Linda Hudepohl mobiel">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <span>+31 6 22741877</span>
-            </a>
+    <form id="checkform" action="verzenden.php" method="post">
 
-            <!-- Email -->
-            <a class="meta-item" href="mailto:linda@fysio-lin.nl" aria-label="Email naar Linda Hudepohl">
-                <i class="fa-regular fa-envelope"></i>
-                <span>linda@fysio-lin.nl</span>
-            </a>
-
-            <!-- LinkedIn -->
-            <a class="meta-item" href="https://www.linkedin.com/in/linda-hudepohl-839235153" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profiel van Linda Hudepohl (nieuw tabblad)">
-                <i class="fa-brands fa-linkedin-in"></i>
-                <span>linda-hudepohl</span>
-            </a>
-            </div>
+        <!-- label and input for Email -->
+        <div class="email container">
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email"
+                placeholder="Voer een geldig email-adres in" maxlength="50"
+                required>
         </div>
 
-        <div class="beige"></div>
+        <!-- label and input for Name -->
+        <div class="name container">
+            <label for="name">Naam</label>
+            <input name="name" id="name" type="text"
+                placeholder="Voer je naam in" required maxlength="50">
+        </div>
 
-    <!-- </div> -->
+        <!-- label for phone number -->
+        <div class="phone container">
+            <label for="phone">Telefoon</label>
+            <input name="phone" id="phone" type="tel"
+                placeholder="Voer je nummer in" required
+                maxlength="50">
+        </div>
+
+        <!-- label for message -->
+        <div class="message container">
+            <label for="message">Bericht</label>
+            <textarea rows="5" name="message" id="message" maxlength="1000"
+                required></textarea>
+        </div>
+
+        <!-- terms of service mag je zelf bedenken -->
+        <!-- <div class="tos">
+            <input id="tos" type="checkbox" required>
+            <label for="tos">Ik accepteer de <a href="#">algemene voorwaarden</a></label>
+        </div> -->
+
+        <!-- laten staan! -->
+        <div style="display:none;">
+            <label>Laat dit veld leeg: voor stomme bots</label>
+            <input type="text" name="website" autocomplete="off">
+        </div>
+
+        <!-- submit button -->
+        <button type="submit" name="submit"
+            class="submit">Verstuur</button>
+    </form>
+
+    <!-- linkerkant met telefoon nummers -->
+    <div class="contact-body">
+        <h3 id="name-1" class="contact-name">Linda Hudepohl</h3>
+
+        <div class="contact-meta">
+          <!-- Mobiel -->
+          <a class="meta-item" href="tel:+31622741877" aria-label="Bel Linda Hudepohl mobiel">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>+31 6 22741877</span>
+          </a>
+
+          <!-- Email -->
+          <a class="meta-item" href="mailto:linda@fysio-lin.nl" aria-label="Email naar Linda Hudepohl">
+            <i class="fa-regular fa-envelope"></i>
+            <span>linda@fysio-lin.nl</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="meta-item" href="https://www.linkedin.com/in/linda-hudepohl-839235153" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profiel van Linda Hudepohl (nieuw tabblad)">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>linda-hudepohl</span>
+          </a>
+        </div>
+    </div>
+    </div>
 
 </section>
