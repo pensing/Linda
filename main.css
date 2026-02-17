@@ -6,6 +6,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* tbv testen */
+/* body {
+  outline: 2px solid red;
+}
+header, main, footer {
+  outline: 2px solid blue;
+}
+section {
+  outline: 2px solid green;
+} */
+
 body {
 	font-family: var(--font-default);
 	color: var(--color-black);
@@ -19,8 +30,9 @@ body {
 	grid-template-rows: auto 1fr auto;
 }
 
-header, main, footer {
+header, main, footer, section {
 	width: 100%;
+	max-width: 100%;
 }
 
 header {
@@ -98,7 +110,7 @@ footer a {
 footer img {
 	height: 60px;
 	max-width: fit-content;
-	padding: 0px 30px;
+	/* padding: 0px 30px; */
 }
 
 section {
@@ -419,13 +431,15 @@ justify-content: center;
 .nav-links {
 	position: absolute;
 	left: 0;
-	top: 80px;
+	top: 160px;
 	display: none;
 	flex-direction: column;
 	width: 100%;
 	background-color: white;
 	box-shadow: 0px 0px 10px silver;
 	z-index: 999;
+	padding: 40px 20px;
+    gap: 0;
 }
 
 .nav-links.active {
@@ -487,7 +501,7 @@ footer {
 }
 
 footer img {
-	/* width: 100%; */
+	width: 100%;
 	/* height: auto; */
 	padding: 5px 0;
 }
@@ -495,19 +509,11 @@ footer img {
 .logo {
 	height: 80px;
 }
-/* 
-.nav-links {
-	position: absolute;
-	left: 0;
-	top: 80px;
-	display: none;
-	flex-direction: column;
-	width: 100%;
-	background-color: white;
-	box-shadow: 0px 0px 10px silver;
-	z-index: 999;
-}
 
+.nav-links {
+	top: 100px;
+}
+/*
 .nav-links.active {
 	display: flex;
 }
@@ -522,7 +528,7 @@ footer img {
 } */
 
 #topButton {
-    bottom: 250px;
+    /* bottom: 250px; */
 	right: 25px;
 }
 
@@ -537,7 +543,7 @@ padding: 10px 0;
 @media (max-width: 480px) {
 
 #topButton {
-    bottom: 230px;
+    bottom: 50px;
 	right: 25px;
 }
 
@@ -547,8 +553,8 @@ padding: 10px 0;
 @media (max-width: 420px) {
 
 #topButton {
-    bottom: 190px;
-	right: 25px;
+    bottom: 40px;
+	right: 15px;
 }
 
 }

@@ -48,7 +48,7 @@
                     </div>
 
                     <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./">Home</a></li>
                         <li><a href="#intro">Over</a></li>
                         <li><a href="#expertise">Expertises</a></li>
                         <li><a href="#education">Docent/spreker</a></li>
@@ -129,9 +129,22 @@
         }
 
         // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
+        function topFunction_old() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // Deze topFunction verwijdert #id uit adresbalk, is SEO-vriendelijk
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+            // Alleen verwijderen als we echt boven zijn
+            setTimeout(() => {
+                history.replaceState(null, null, window.location.pathname);
+            }, 400);
         }
 
         </script>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="nl">
+<html lang="nl">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <meta name="keywords" content="​Therapy Center, ​Group Therapy &amp;amp; Workshops, Workshops, ​Couples and Family Therapy, ​Psychology and Counselling Services, ​What is Group Therapy?, Understanding group therapy, Contact Us">
-        <meta name="description" content="">
-        <title>Home</title>
+        <meta name="description" content="Fysio-Lin: zorgprofessional in gespecialiseerde fysiotherapie en vestibulaire fysiotherapie. Persoonlijke begeleiding, professioneel advies en lezingen voor gezondheidsprofessionals.">
+        <meta name="keywords" content="Fysio-Lin, fysiotherapie, gespecialiseerde fysiotherapie, vestibulaire fysiotherapie, fysiotherapeute, docent, spreker, revalidatie">
+        <title>Fysio-Lin | Gespecialiseerde & Vestibulaire Fysiotherapie | Docent & Spreker</title>
         <link rel="stylesheet" href="base.css" media="screen">
         <link rel="stylesheet" href="main.css" media="screen">
         <!-- <script type="text/javascript" src="jquery.js" defer=""></script>
@@ -20,27 +20,136 @@
             "@type": "Organization",
             "name": "",
             "logo": "images/default-logo.png"
-    }</script>
-        <meta property="og:title" content="Home">
+    }
+        </script>
+        
+        <!-- Optioneel: social media / Open Graph -->
+        <meta property="og:title" content="Fysio-Lin | Gespecialiseerde & Vestibulaire Fysiotherapie, docent & spreker">
+        <meta property="og:description" content="Fysio-Lin biedt gespecialiseerde fysiotherapie, vestibulaire fysiotherapie en opleidingen/lezingen voor gezondheidsprofessionals.">
         <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.fysio-lin.nl">
+        <meta property="og:image" content="https://www.fysio-lin.nl/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
         <meta data-intl-tel-input-cdn-path="intlTelInput/">
     </head>
-
     <body>
+        <!-- <header class="page-wrapper"> -->
+        <header class="full-header">
+            <div class="page-wrapper">
+                <div class="logo">
+                    <img src="./images/logo_fysio_lin.png" alt="Logo">
+                </div>
+                <nav>
+                    <!-- Hamburger icon voor mobiel -->
+                    <div class="menu-toggle" id="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
 
-        <header>
-
+                    <ul class="nav-links">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="#intro">Over</a></li>
+                        <li><a href="#expertise">Expertises</a></li>
+                        <li><a href="#education">Docent/spreker</a></li>
+                        <li><a href="#collaborations">Samenwerkingen</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-
-        <main id="main-content">
-
-        </main>
-
+        <main id="main-content"></main>
         <footer>
+            <div class="footer-top">
+                <nav>
+                    <button class="footer-button" id="openPrivacy"><i class="fa-solid fa-shield-halved"></i> Privacyverklaring</button>
+                    <button class="footer-button" id="openDisclaimer"><i class="fa-solid fa-circle-info"></i> Disclaimer</button>
+                    <button class="footer-button" id="openColofon"><i class="fa-solid fa-user"></i> Colofon</button>
+                </nav>
+                <div class="">
+                    <img src="./images/logo_jeroen.png" alt="Logo Jeroen">
+                    <img src="./images/logo_ivrt_invers_en.png" alt="Logo IVRT">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> FysioLin. Alle rechten voorbehouden.
+                <script>
+                // Huidige jaar ophalen
+                const year = new Date().getFullYear();
 
-        </footer>
+                // Jaar invoegen in het element met id "year"
+                document.getElementById("year").textContent = year;
+                </script>
+            </div>
+            <div class="page-wrapper">
+                <button onclick="topFunction()" id="topButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+    
+            <!-- <div class="modal-content" id="disclaimerContent"></div> -->
+    
+            <!-- Containers waar modals via fetch wordt geladen -->
+            <div id="modalContainer"></div>
+            <div id="modalDisclaimerContainer"></div>
+            <div id="modalColofonContainer"></div>
+            </footer>
+
+
+        <script>
+
+        // mobiel menu werking
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
+
+        mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+        
+        // Sluit menu bij klik op een link
+        navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+        });
+
+        // topButton werking
+
+        // Get the button:
+        let topbutton = document.getElementById("topButton");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topbutton.style.display = "block";
+        } else {
+            topbutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction_old() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // Deze topFunction verwijdert #id uit adresbalk, is SEO-vriendelijk
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+            // Alleen verwijderen als we echt boven zijn
+            setTimeout(() => {
+                history.replaceState(null, null, window.location.pathname);
+            }, 400);
+        }
+
+        </script>
 
         <script type="module" src="./main.js"></script>
-
+        <!-- <script src="./main.js"></script> -->
     </body>
 </html>
