@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Fysio-Lin: zorgprofessional in gespecialiseerde fysiotherapie en vestibulaire fysiotherapie. Persoonlijke begeleiding, professioneel advies en lezingen voor gezondheidsprofessionals.">
         <meta name="keywords" content="Fysio-Lin, fysiotherapie, gespecialiseerde fysiotherapie, vestibulaire fysiotherapie, fysiotherapeute, docent, spreker, revalidatie">
+        <meta name="referrer" content="origin">
+
         <title>Fysio-Lin | Gespecialiseerde & Vestibulaire Fysiotherapie | Docent & Spreker</title>
+
         <link rel="stylesheet" href="base.css" media="screen">
         <link rel="stylesheet" href="main.css" media="screen">
-        <!-- <script type="text/javascript" src="jquery.js" defer=""></script>
-        <script type="text/javascript" src="linda.js" defer=""></script> -->
-        <meta name="referrer" content="origin">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Palanquin+Dark:400,500,600,700">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-        <!-- fontawesome code -->
+
+        <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/20d281916e.js" crossorigin="anonymous"></script>
         <script type="application/ld+json">{
             "@context": "http://schema.org",
@@ -23,7 +24,7 @@
     }
         </script>
         
-        <!-- Optioneel: social media / Open Graph -->
+        <!-- Social media / Open Graph -->
         <meta property="og:title" content="Fysio-Lin | Gespecialiseerde & Vestibulaire Fysiotherapie, docent & spreker">
         <meta property="og:description" content="Fysio-Lin biedt gespecialiseerde fysiotherapie, vestibulaire fysiotherapie en opleidingen/lezingen voor gezondheidsprofessionals.">
         <meta property="og:type" content="website">
@@ -42,7 +43,7 @@
                     <img src="./images/logo_fysio_lin.png" alt="Logo">
                 </div>
                 <nav>
-                    <!-- Hamburger icon voor mobiel -->
+                    <!-- Hamburger icon -->
                     <div class="menu-toggle" id="mobile-menu">
                         <i class="fas fa-bars"></i>
                     </div>
@@ -62,9 +63,9 @@
         <footer>
             <div class="footer-top">
                 <nav>
-                    <button class="footer-button" id="openPrivacy"><i class="fa-solid fa-shield-halved"></i> Privacyverklaring</button>
-                    <button class="footer-button" id="openDisclaimer"><i class="fa-solid fa-circle-info"></i> Disclaimer</button>
-                    <button class="footer-button" id="openColofon"><i class="fa-solid fa-user"></i> Colofon</button>
+                    <button type="button" class="footer-button" id="openPrivacy"><i class="fa-solid fa-shield-halved"></i> Privacyverklaring</button>
+                    <button type="button" class="footer-button" id="openDisclaimer"><i class="fa-solid fa-circle-info"></i> Disclaimer</button>
+                    <button type="button" class="footer-button" id="openColofon"><i class="fa-solid fa-user"></i> Colofon</button>
                 </nav>
                 <div class="">
                     <img src="./images/logo_jeroen.png" alt="Logo Jeroen">
@@ -74,82 +75,22 @@
             <div class="footer-bottom">
                 &copy; <span id="year"></span> FysioLin. Alle rechten voorbehouden.
                 <script>
-                // Huidige jaar ophalen
-                const year = new Date().getFullYear();
-
-                // Jaar invoegen in het element met id "year"
-                document.getElementById("year").textContent = year;
+                    // Get current year
+                    const year = new Date().getFullYear();
+                    document.getElementById("year").textContent = year;
                 </script>
             </div>
             <div class="page-wrapper">
-                <button onclick="topFunction()" id="topButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+                <button type="button" onclick="topFunction()" id="topButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
             </div>
     
-            <!-- <div class="modal-content" id="disclaimerContent"></div> -->
-    
-            <!-- Containers waar modals via fetch wordt geladen -->
+            <!-- Modal containers fetched -->
             <div id="modalContainer"></div>
             <div id="modalDisclaimerContainer"></div>
             <div id="modalColofonContainer"></div>
             </footer>
 
-
-        <script>
-
-        // mobiel menu werking
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        const navItems = document.querySelectorAll('.nav-links li a');
-
-        mobileMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        });
-        
-        // Sluit menu bij klik op een link
-        navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-        });
-
-        // topButton werking
-
-        // Get the button:
-        let topbutton = document.getElementById("topButton");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            topbutton.style.display = "block";
-        } else {
-            topbutton.style.display = "none";
-        }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction_old() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-
-        // Deze topFunction verwijdert #id uit adresbalk, is SEO-vriendelijk
-        function topFunction() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-            // Alleen verwijderen als we echt boven zijn
-            setTimeout(() => {
-                history.replaceState(null, null, window.location.pathname);
-            }, 400);
-        }
-
-        </script>
-
         <script type="module" src="./main.js"></script>
-        <!-- <script src="./main.js"></script> -->
+
     </body>
 </html>

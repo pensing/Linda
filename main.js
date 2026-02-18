@@ -1,3 +1,55 @@
+// Als je <script type="module"> gebruikt, dan wordt je script automatisch deferred geladen (dus pas na het parsen van de HTML).
+// Dat betekent dat je in principe DOMContentLoaded niet eens nodig hebt — maar het is wel veilig en future-proof.
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Hamburger menu
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Close menu on click whatever menu-item-link
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // GoTopButton
+    const topbutton = document.getElementById("topButton");
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topbutton.style.display = "block";
+        } else {
+            topbutton.style.display = "none";
+        }
+    }
+
+    window.addEventListener("scroll", scrollFunction);
+
+    // SEO-friendly smooth scroll to top
+    window.topFunction = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        setTimeout(() => {
+            history.replaceState(null, null, window.location.pathname);
+        }, 400);
+    };
+
+});
+
+
 
 const main = document.getElementById("main-content");
 
@@ -126,3 +178,6 @@ console.error(err);
 loadModal('./modals/privacy.html');
 loadDisclaimerModal('./modals/disclaimer.html');
 loadColofonModal('./modals/colofon.html');
+
+
+
