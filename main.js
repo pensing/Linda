@@ -4,51 +4,111 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Hamburger menu
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links li a');
+  // -------------------------
+  // Hamburger menu
+  // -------------------------
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links li a');
 
-    if (mobileMenu && navLinks) {
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+  if (mobileMenu && navLinks) {
+    mobileMenu.addEventListener('click', () => navLinks.classList.toggle('active'));
+  }
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => navLinks.classList.remove('active'));
+  });
+
+  // -------------------------
+  // Smooth scroll-to-top button
+  // -------------------------
+  const topButton = document.getElementById("topButton");
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
     }
+  }
 
-    // Close menu on click whatever menu-item-link
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-    });
+  window.addEventListener("scroll", scrollFunction);
 
-    // GoTop Button
-    const topbutton = document.getElementById("topButton");
+  topButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      history.replaceState(null, null, window.location.pathname);
+    }, 400);
+  });
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            topbutton.style.display = "block";
-        } else {
-            topbutton.style.display = "none";
-        }
+  // -------------------------
+  // Generieke modal loader
+  // -------------------------
+  async function loadModal({ url, containerId, modalId, openBtnId, closeBtnId }) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Kan modal niet laden: ${url}`);
+      const html = await response.text();
+
+      const container = document.getElementById(containerId);
+      container.innerHTML = html;
+
+      const modal = document.getElementById(modalId);
+      const openBtn = document.getElementById(openBtnId);
+      const closeBtn = document.getElementById(closeBtnId);
+
+      if (!modal || !openBtn || !closeBtn) return;
+
+      // Open modal
+      openBtn.addEventListener("click", () => modal.classList.add("active"));
+
+      // Sluit modal via X
+      closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+
+      // Sluit modal bij klik buiten content
+      modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.remove("active");
+      });
+
+      // Sluit modal via Escape
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") modal.classList.remove("active");
+      });
+
+    } catch (err) {
+      console.error(err);
     }
+  }
 
-    window.addEventListener("scroll", scrollFunction);
-
-    // SEO-friendly smooth scroll to top
-    if (topbutton) {
-        topbutton.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-            setTimeout(() => {
-                history.replaceState(null, null, window.location.pathname);
-            }, 400);
-        });
+  // -------------------------
+  // Modals configuratie
+  // -------------------------
+  const modals = [
+    {
+      url: './modals/privacy.html',
+      containerId: 'modalPrivacyContainer',
+      modalId: 'privacyModal',
+      openBtnId: 'openPrivacy',
+      closeBtnId: 'closePrivacy'
+    },
+    {
+      url: './modals/disclaimer.html',
+      containerId: 'modalDisclaimerContainer',
+      modalId: 'disclaimerModal',
+      openBtnId: 'openDisclaimer',
+      closeBtnId: 'closeDisclaimer'
+    },
+    {
+      url: './modals/colofon.html',
+      containerId: 'modalColofonContainer',
+      modalId: 'colofonModal',
+      openBtnId: 'openColofon',
+      closeBtnId: 'closeColofon'
     }
+  ];
 
+  // Laad alle modals
+  modals.forEach(loadModal);
 
 });
 
@@ -105,82 +165,4 @@ async function loadSections() {
 }
 
 loadSections();
-
-// Functie om modals te fetchen
-async function loadModal(url) {
-try {
-const response = await fetch(url);
-if (!response.ok) throw new Error('Kan modal niet laden.');
-const html = await response.text();
-document.getElementById('modalContainer').innerHTML = html;
-
-
-// Voeg functionaliteit toe nadat de modal is geladen
-const modal = document.getElementById('privacyModal');
-const openBtn = document.getElementById('openPrivacy');
-const closeBtn = document.getElementById('closePrivacy');
-
-
-openBtn.addEventListener('click', () => modal.classList.add('active'));
-closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('active'); });
-} catch(err) {
-console.error(err);
-}
-}
-
-async function loadDisclaimerModal(url) {
-try {
-const response = await fetch(url);
-if (!response.ok) throw new Error('Kan modal niet laden.');
-const html = await response.text();
-document.getElementById('modalDisclaimerContainer').innerHTML = html;
-
-
-// Voeg functionaliteit toe nadat de modal is geladen
-const modal = document.getElementById('disclaimerModal');
-const openBtn = document.getElementById('openDisclaimer');
-const closeBtn = document.getElementById('closeDisclaimer');
-
-
-openBtn.addEventListener('click', () => modal.classList.add('active'));
-closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('active'); });
-} catch(err) {
-console.error(err);
-}
-}
-
-async function loadColofonModal(url) {
-try {
-const response = await fetch(url);
-if (!response.ok) throw new Error('Kan modal niet laden.');
-const html = await response.text();
-document.getElementById('modalColofonContainer').innerHTML = html;
-
-
-// Voeg functionaliteit toe nadat de modal is geladen
-const modal = document.getElementById('colofonModal');
-const openBtn = document.getElementById('openColofon');
-const closeBtn = document.getElementById('closeColofon');
-
-
-openBtn.addEventListener('click', () => modal.classList.add('active'));
-closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('active'); });
-} catch(err) {
-console.error(err);
-}
-}
-
-
-// Modals fetchen en toevoegen aan pagina
-loadModal('./modals/privacy.html');
-loadDisclaimerModal('./modals/disclaimer.html');
-loadColofonModal('./modals/colofon.html');
-
-
 
