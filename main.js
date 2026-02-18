@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // GoTopButton
+    // GoTop Button
     const topbutton = document.getElementById("topButton");
 
     function scrollFunction() {
@@ -36,16 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", scrollFunction);
 
     // SEO-friendly smooth scroll to top
-    window.topFunction = function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+    if (topbutton) {
+        topbutton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
-        setTimeout(() => {
-            history.replaceState(null, null, window.location.pathname);
-        }, 400);
-    };
+            setTimeout(() => {
+                history.replaceState(null, null, window.location.pathname);
+            }, 400);
+        });
+    }
+
 
 });
 
