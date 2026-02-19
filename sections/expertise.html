@@ -1,4 +1,13 @@
 <style>
+    #expertise {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-top: 4rem;
+        background-color: var(--color-white);
+    }
+
     #expertise .top-spacer {
         width: 100%;
         height: 300px;
@@ -7,18 +16,9 @@
 
     #expertise .bottom-spacer {
         width: 100%;
-        height: 300px;
-        margin-top: -250px;
+        height: 200px;
+        margin-top: -200px;
         background-color: var(--color-accent1);
-    }
-
-    #expertise {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding-top: 100px;
-        background-color: var(--color-white);
     }
 
     #expertise .container {
@@ -35,8 +35,17 @@
 
     #expertise .container .cards-container {
         display: flex;
+        gap: 2rem;
         justify-content: space-between;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
+    }
+
+    #expertise .container .cards-container > * {
+        flex: 1;
+    }
+
+    #expertise .container .cards-container > a {
+        padding: 0;
     }
 
     #expertise .container .cards-container .card {
@@ -45,7 +54,6 @@
         justify-content: center;
         align-items: center;
         background-color: var(--color-accent2);
-        width: 30.33%;
         padding: 50px 0;
         gap: 20px;
     }
@@ -141,12 +149,7 @@
     @media (min-width: 768px) and (max-width: 991px) {
         #expertise .container .cards-container {
             flex-wrap: nowrap;
-            gap: 20px;
-        }
-
-        #expertise .container .cards-container .card {
-            width: 48%;
-            margin-bottom: 20px;
+            gap: 1rem;
         }
 
         #expertise .container .workshops {
@@ -176,13 +179,13 @@
     @media (min-width: 576px) and (max-width: 767px) {
         #expertise .container .cards-container {
             flex-wrap: nowrap;
-            gap: 6px;
+            gap: 1rem;
         }
 
         #expertise .container .cards-container .card {
             width: 100%;
             margin-bottom: 20px;
-            padding: 30px 0;
+            padding: 30px 10px;
         }
 
         #expertise .container .workshops {
@@ -217,11 +220,13 @@
         #expertise .container .cards-container {
             flex-wrap: wrap;
             margin-bottom: 0;
+            gap: 1rem;
         }
 
         #expertise .container .cards-container .card {
-            width: 100%;
+            /* width: 100%; */
             margin-bottom: 20px;
+            padding: 30px 20px;
         }
 
         #expertise .container .workshops {
@@ -253,21 +258,27 @@
     <div class="container page-wrapper">
         <h2>Mijn expertises</h2>
         <div class="cards-container">
-            <div class="card">
-                <img src="./images/hoofdpijn2.png" alt="family therapy">
-                <h2>Gespecialiseerde<br>fysiotherapie</h2>
-                <a href="#specialized_therapy" aria-label="Orofaciale fysiotherapie"><i class="fa-solid fa-arrow-down"></i></a>
-            </div>
-            <div class="card">
-                <img src="./images/2913000-72ec1bdc.png" alt="Vestibulaire fysiotherapie">
-                <h2>Vestibulaire<br>fysiotherapie</h2>
-                <a href="#vestibular_therapy" aria-label="Vestibulaire fysiotherapie"><i class="fa-solid fa-arrow-down"></i></a>
-            </div>
-            <div class="card">
-                <img src="./images/individueel.png" alt="group therapy">
-                <h2>Docent<br>Spreker</h2>
-                <a href="#education" aria-label="Docent / Spreker"><i class="fa-solid fa-arrow-down"></i></a>
-            </div>
+            <a href="#specialized_therapy" aria-label="Orofaciale fysiotherapie">
+                <div class="card">
+                    <img src="./images/hoofdpijn2.png" alt="family therapy">
+                    <h2>Gespecialiseerde<br>fysiotherapie</h2>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </a>
+            <a href="#vestibular_therapy" aria-label="Vestibulaire fysiotherapie">
+                <div class="card">
+                    <img src="./images/2913000-72ec1bdc.png" alt="Vestibulaire fysiotherapie">
+                    <h2>Vestibulaire<br>fysiotherapie</h2>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </a>
+            <a href="#education" aria-label="Docent / Spreker">
+                <div class="card">
+                    <img src="./images/individueel.png" alt="group therapy">
+                    <h2>Docent<br>Spreker</h2>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </a>
         </div>
     </div>
     <div class="bottom-spacer">
